@@ -31,19 +31,23 @@ const Container = styled.div`
 const Subtitle = styled.span<TextStyle>`
   letter-spacing: 3px;
   font-size: calc(2vw + 5px);
-  font-weight: 700;
+  font-weight: 500;
   text-align: ${({ align }) => align};
 `;
 
 const Description = styled.span<TextStyle>`
   font-size: 2vw;
+  font-weight: 300;
   text-align: ${({ align }) => align};
-  margin-bottom: 2vw;
+  margin: 1.5vw 0;
 `;
 
 const Separator = styled.div`
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
   height: 1px;
-  width: 100vw;
   background-color: #a7a7a7;
   margin: 4vw 0;
 `;
