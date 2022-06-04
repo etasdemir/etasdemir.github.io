@@ -20,6 +20,7 @@ const WorkContainer = styled.div`
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 `;
 
 const Title = styled.span`
