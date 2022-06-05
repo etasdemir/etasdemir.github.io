@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import Navigation from '../../nav/Navigation';
 
 function Home() {
+  const homeRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    Navigation.addScreen('home', homeRef);
+  }, []);
+
   return (
-    <HomeContainer>
+    <HomeContainer ref={homeRef}>
       <GreetingText>hi there <GreetingEmoji>&#x2728;</GreetingEmoji></GreetingText>
       <Title>i&apos;m Eren Tasdemir</Title>
       <Description>...self-motivated and enthusiastic software developer with a strong background in mobile application development from Turkey.</Description>
@@ -19,6 +25,7 @@ const HomeContainer = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  padding-top: 4vw;
 `;
 
 const GreetingText = styled.span`
@@ -49,7 +56,7 @@ const ProfileContainer = styled.div`
 const ProfilePicture = styled.img`
   height: 25vw;
   border-radius: 50%;
-  opacity: 0.6;
+  opacity: 0.5;
 `;
 
 export default Home;

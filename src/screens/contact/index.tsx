@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import ContactItem from '../../components/ContactItem';
+import Navigation from '../../nav/Navigation';
 import { EMAIL, GITHUB_URL, LINKEDIN_URL } from '../../shared/Constants';
 import { ContactInfo } from '../../shared/Types';
 
@@ -24,8 +25,13 @@ const contact: Array<ContactInfo> = [
 ];
 
 function Contact() {
+  const contactRef = useRef(null);
+  useEffect(() => {
+    Navigation.addScreen('contact', contactRef)
+  }, [])
+
   return (
-    <Container>
+    <Container ref={contactRef}>
       <InfoContainer>
         <EndGreeting>Thank you for visiting!</EndGreeting>
         <ContactContainer>
@@ -34,10 +40,7 @@ function Contact() {
           ))}
         </ContactContainer>
       </InfoContainer>
-      <ScrollButton onClick={() => scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      })}>
+      <ScrollButton onClick={() => Navigation.scrollTop()}>
         ↑ scroll top
       </ScrollButton>
     </Container>
@@ -71,8 +74,8 @@ const ContactContainer = styled.div`
 
 const ScrollButton = styled.div`
   position: absolute;
-  top: 10%;
-  left: 65%;
+  top: 30%;
+  left: 75%;
   border-radius: 50%;
   background-color: #cce9f3;
   cursor: pointer;

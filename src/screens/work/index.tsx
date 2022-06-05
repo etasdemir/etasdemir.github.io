@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import { GITHUB_URL } from '../../shared/Constants';
 import Hyperlink from '../../components/Hyperlink';
+import Navigation from '../../nav/Navigation';
 
 function Work() {
+  const workRef = useRef(null);
+  useEffect(() => {
+    Navigation.addScreen('work', workRef);
+  }, []);
+
   return (
-    <WorkContainer>
+    <WorkContainer ref={workRef}>
       <Title>Work</Title>
       <Description>Here are some projects I developed in my spare time. Check out my <Hyperlink url={GITHUB_URL}><span>Github</span></Hyperlink> for more of them.</Description>
       <ProjectContainer>
@@ -17,7 +23,7 @@ function Work() {
 }
 
 const WorkContainer = styled.div`
-  margin-top: 20px;
+  padding-top: 2vw;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

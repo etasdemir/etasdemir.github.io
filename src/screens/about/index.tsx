@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import AboutSection from '../../components/AboutSection';
+import Navigation from '../../nav/Navigation';
 
 const about = [
   {
@@ -19,16 +20,21 @@ const about = [
 ];
 
 function About() {
+  const aboutRef = useRef(null);
+  useEffect(() => {
+    Navigation.addScreen('about', aboutRef);
+  }, []);
+
   const getTextAlign = (index: number): string => {
     let textAlign = 'start';
     if (index % 2 === 1) {
       textAlign = 'end';
     }
-    return textAlign
+    return textAlign;
   };
 
   return (
-    <Container>
+    <Container ref={aboutRef}>
       <Title>About</Title>
       {about.map((item, index) => (
         <AboutSection key={item.subtitle + index} subtitle={item.subtitle} description={item.description} textAlignment={getTextAlign(index)} />

@@ -45,7 +45,7 @@ const Description = styled.span<TextStyle>`
 const Separator = styled.div`
   position: absolute;
   left: 0px;
-  right: 0px;
+  right: var(--side-menu-width);
   z-index: -1;
   height: 1px;
   background-color: #a7a7a7;
