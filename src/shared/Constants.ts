@@ -28,7 +28,7 @@ export const ABOUT: AboutElement[] = [
   },
   {
     title: 'favourite newsletters',
-    subtitle: "They're great for keeping up with all the news and everything that's changing in the industry. Today's newsletter helps us save time by providing great articles, tips, useful resources, learning more about a topic that interests you, and so on. I'm getting addicted to newsletters now.",
+    subtitle: "They're great for keeping up with all the news and everything that's changing in the industry. Today's newsletters help save time by providing great articles, tips, useful resources, learning more about a topic that interests you, and so on. I'm getting addicted to newsletters now.",
     type: "hyperlink",
     descriptions: [
       "Android Weekly",

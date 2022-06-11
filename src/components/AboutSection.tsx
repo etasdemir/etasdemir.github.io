@@ -39,7 +39,8 @@ const Title = styled.span`
 `;
 
 const Subtitle = styled.span`
-  font-size: 1.6rem;
+  margin-top: 0.5em;
+  font-size: 1.5rem;
   font-weight: 400;
 `;
 

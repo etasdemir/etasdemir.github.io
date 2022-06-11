@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import AboutSection from '../../components/AboutSection';
+import AboutDescription from '../../components/AboutDescription';
 import Navigation from '../../nav/Navigation';
 import { ABOUT } from '../../shared/Constants';
 import { AboutElement } from '../../shared/Types';
-import { getAboutDescription } from './AboutDescription';
 
 function About() {
   const aboutRef = useRef(null);
@@ -30,7 +30,7 @@ function About() {
             key={item.title + index}
             title={item.title}
             subtitle={item.subtitle}
-            description={getAboutDescription(item, index)}
+            description={<AboutDescription item={item} index={index} />}
             alignment={getAlignment(index)} />
         );
       })}
