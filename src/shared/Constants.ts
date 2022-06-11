@@ -1,4 +1,6 @@
-import { AboutElement } from "./Types";
+import { AboutElement, ContactInfo } from "./Types";
+
+// material color: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=F9A825
 
 export const EMAIL = "erentasdemircs@gmail.com";
 
@@ -20,8 +22,8 @@ export const ABOUT: AboutElement[] = [
     type: "element",
     descriptions: [
       "Android, Kotlin, Java, C++",
-      "React Native, JavaScript",
-      "React, HTML/CSS"
+      "React Native, React",
+      "JavaScript, HTML/CSS"
     ],
   },
   {
@@ -58,3 +60,22 @@ export const ABOUT: AboutElement[] = [
     ]
   },
 ];
+
+export const CONTACT: Array<ContactInfo> = [
+  {
+    urlName: EMAIL,
+    url: `mailto:${EMAIL}`,
+    buttonText: 'send me email',
+  },
+  {
+    urlName: GITHUB_URL,
+    url: GITHUB_URL,
+    buttonText: 'visit github',
+  },
+  {
+    urlName: 'Eren Tasdemir',
+    url: LINKEDIN_URL,
+    buttonText: 'visit linkedin',
+  }
+];
+

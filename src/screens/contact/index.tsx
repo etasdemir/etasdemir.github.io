@@ -3,45 +3,26 @@ import styled from 'styled-components';
 
 import ContactItem from '../../components/ContactItem';
 import Navigation from '../../nav/Navigation';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL } from '../../shared/Constants';
-import { ContactInfo } from '../../shared/Types';
-
-const contact: Array<ContactInfo> = [
-  {
-    urlName: EMAIL,
-    url: `mailto:${EMAIL}`,
-    buttonText: 'send me email',
-  },
-  {
-    urlName: GITHUB_URL,
-    url: GITHUB_URL,
-    buttonText: 'visit github',
-  },
-  {
-    urlName: 'Eren Tasdemir',
-    url: LINKEDIN_URL,
-    buttonText: 'visit linkedin',
-  }
-];
+import { CONTACT } from '../../shared/Constants';
 
 function Contact() {
   const contactRef = useRef(null);
   useEffect(() => {
-    Navigation.addScreen('contact', contactRef)
-  }, [])
+    Navigation.addScreen('contact', contactRef);
+  }, []);
 
   return (
     <Container ref={contactRef}>
       <InfoContainer>
         <EndGreeting>Thank you for visiting!</EndGreeting>
         <ContactContainer>
-          {contact.map((item, index) => (
+          {CONTACT.map((item, index) => (
             <ContactItem key={item.url + index} paddingStart={index * 20} contact={item} />
           ))}
         </ContactContainer>
       </InfoContainer>
       <ScrollButton onClick={() => Navigation.scrollTop()}>
-        ↑ scroll top
+        <ScrollButtonText>↑ scroll top</ScrollButtonText>
       </ScrollButton>
     </Container>
   );
@@ -61,14 +42,14 @@ const InfoContainer = styled.div`
 
 const EndGreeting = styled.span`
   letter-spacing: 3px;
-  font-size: 3vw;
+  font-size: 4rem;
   font-weight: 400;
 `;
 
 const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 3vw;
+  margin-top: 4em;
   width: 100%;
 `;
 
@@ -77,19 +58,24 @@ const ScrollButton = styled.div`
   top: 30%;
   left: 75%;
   border-radius: 50%;
-  background-color: #cce9f3;
+  background-color: var(--primary-light);
+  opacity: 0.5;
   cursor: pointer;
 
-  padding: calc(4vw + 10px) 1.8vw;
-  font-size: calc(1.2vw + 5px);
-  color: #00000055;
-  font-weight: bold;
-
-  transition: transform 500ms;
+  padding: 5rem 2rem;
+  transition: 500ms;
 
   &:hover {
     transform: translate(0, -3vw);
+    opacity: 1;
   }
+`;
+
+const ScrollButtonText = styled.span`
+  opacity: 1;
+  font-size: 1.6rem;
+  color: black;
+  font-weight: bold;
 `;
 
 export default Contact;  

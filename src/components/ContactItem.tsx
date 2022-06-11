@@ -47,12 +47,12 @@ const Container = styled.div<ContainerProps>`
   padding-left: ${({paddingStart}) => paddingStart}vw;
   display: flex;
   flex-direction: column;
-  margin: 1vw 0;
+  margin: 1em 0;
 `;
 
 const CopiedText = styled.span<CopiedTextProps>`
   display: inline-block;
-  font-size: 1vw;
+  font-size: 1em;
   letter-spacing: 0.15vw;
   font-weight: 600;
   opacity: ${({ opacity }) => opacity};
@@ -67,12 +67,12 @@ const Name = styled.span`
   -ms-user-select: text;
   user-select: text;
 
-  font-size: calc(2vw - 8px);
+  font-size: 2em;
   display: inline-block;
 `;
 
 const Button = styled.div`
-  font-size: calc(2vw - 8px);
+  font-size: 1.8em;
   font-weight: 600;
   cursor: pointer;
   transition: transform 500ms;

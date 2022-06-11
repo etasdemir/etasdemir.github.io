@@ -11,9 +11,11 @@ export function getAboutDescription(item: AboutElement, index: number) {
     case "simple":
       return <Description key={index}>{descriptions}</Description>;
     case "element":
-      return descriptions.map((element, index) =>
-        <Description key={index}>{element}</Description>
-      );
+      return <ElementContainer>
+        {descriptions.map((element, index) =>
+          <Description key={index}>{element}</Description>
+        )}
+      </ElementContainer>;
     case "hyperlink":
       return descriptions.map((desc, index) => {
         return urls ?
@@ -26,7 +28,17 @@ export function getAboutDescription(item: AboutElement, index: number) {
   }
 }
 
+const ElementContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Description = styled.span`
   font-size: 1.4rem;
   font-weight: 300;
+  &::before {
+    content: "▸";
+    color: var(--primary-dark);
+    font-size: 1.4rem;
+  }
 `;

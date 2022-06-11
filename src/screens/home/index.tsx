@@ -25,23 +25,23 @@ const HomeContainer = styled.div`
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  padding-top: 4vw;
+  padding-top: 5em;
 `;
 
 const GreetingText = styled.span`
-  font-size: 2vw;
+  font-size: 2.5rem;
 `;
 
 const Title = styled.span`
-  font-size: 5vw;
+  font-size: 6rem;
   font-weight: bold;
-  margin-top: 4vw;
+  margin-top: 0.6em;
 `;
 
 const Description = styled.span`
-  font-size: 2vw;
+  font-size: 2.5rem;
   width: 70%;
-  margin-top: 3vw;
+  margin-top: 1.2em
 `;
 
 const ProfileContainer = styled.div`
@@ -50,9 +50,9 @@ const ProfileContainer = styled.div`
 `;
 
 const ProfilePicture = styled.img`
-  height: 25vw;
+  height: 30em;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.75;
   transition: opacity 800ms;
 
   &:hover {

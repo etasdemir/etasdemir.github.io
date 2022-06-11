@@ -49,7 +49,7 @@ const Separator = styled.div`
   right: var(--side-menu-width);
   z-index: -1;
   height: 1px;
-  background-color: #a7a7a7;
+  background-color: var(--grey);
 `;
 
 export default AboutSection;

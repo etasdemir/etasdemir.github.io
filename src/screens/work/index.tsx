@@ -23,20 +23,20 @@ function Work() {
 }
 
 const WorkContainer = styled.div`
-  padding-top: 2vw;
+  padding-top: 2.5em;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 `;
 
 const Title = styled.span`
-  font-size: 4vw;
+  font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 4vw;
+  margin-bottom: 1em;
 `;
 
 const Description = styled.span`
-  font-size: 2vw;
+  font-size: 2.5rem;
   width: 50%;
 `;
 

@@ -5,7 +5,7 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #e7e7da;
+    background-color: var(--grey-light);
     max-width: 100vw;
     --side-menu-width: 6vw;
 
@@ -18,6 +18,14 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+:root {
+    --primary-light: #ffd95a;
+    --primary: #f9a825;
+    --primary-dark: #c17900;
+    --grey: #9e9e9e;
+    --grey-light: #ffdecf;
 }
 
 code {

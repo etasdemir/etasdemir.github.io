@@ -37,7 +37,7 @@ const MenuContainer = styled.div`
   border-width: 0;
   border-left: 1px;
   border-style: solid;
-  border-color: #aaa;
+  border-color: var(--grey);
 
   display: flex;
   flex-direction: column;
