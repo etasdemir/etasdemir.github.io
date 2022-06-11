@@ -2,44 +2,45 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface Props {
-  subtitle: string;
-  description: string;
-  textAlignment: string;
+  title: string;
+  subtitle?: string;
+  description: JSX.Element | JSX.Element[];
+  alignment: string;
 }
 
-interface TextStyle {
+interface Align {
   align: string;
 }
 
 function AboutSection(props: Props) {
-  const { subtitle, description, textAlignment } = props;
+  const { title, subtitle, description, alignment } = props;
 
   return (
-    <Container>
-      <Subtitle align={textAlignment}>{subtitle}</Subtitle>
-      <Description align={textAlignment}>{description}</Description>
+    <Container align={alignment}>
+      <Title>{title}</Title>
+      {typeof subtitle !== "undefined" ? <Subtitle>{subtitle}</Subtitle> : null}
+      {description}
       <Separator />
     </Container>
   );
 }
 
-const Container = styled.div`
+const Container = styled.div<Align>`
   display: flex;
   flex-direction: column;
+  align-items: ${({align}) => align};
+  margin: 4em 6em;
 `;
 
-const Subtitle = styled.span<TextStyle>`
+const Title = styled.span`
   letter-spacing: 3px;
-  font-size: calc(2vw + 5px);
-  font-weight: 500;
-  text-align: ${({ align }) => align};
+  font-size: 2.5rem;
+  font-weight: bold;
 `;
 
-const Description = styled.span<TextStyle>`
-  font-size: 2vw;
-  font-weight: 300;
-  text-align: ${({ align }) => align};
-  margin: 1.5vw 0;
+const Subtitle = styled.span`
+  font-size: 1.6rem;
+  font-weight: 400;
 `;
 
 const Separator = styled.div`
@@ -49,7 +50,6 @@ const Separator = styled.div`
   z-index: -1;
   height: 1px;
   background-color: #a7a7a7;
-  margin: 4vw 0;
 `;
 
 export default AboutSection;

@@ -10,9 +10,9 @@ function Home() {
 
   return (
     <HomeContainer ref={homeRef}>
-      <GreetingText>hi there <GreetingEmoji>&#x2728;</GreetingEmoji></GreetingText>
+      <GreetingText>hi there,</GreetingText>
       <Title>i&apos;m Eren Tasdemir</Title>
-      <Description>...self-motivated and enthusiastic software developer with a strong background in mobile application development from Turkey.</Description>
+      <Description>...self-motivated and enthusiastic software developer from Turkey with a strong background in mobile application development, especially on Android.</Description>
       <ProfileContainer>
         <ProfilePicture src={require('../../assets/profile.jpg')} />
       </ProfileContainer>
@@ -32,14 +32,10 @@ const GreetingText = styled.span`
   font-size: 2vw;
 `;
 
-const GreetingEmoji = styled.span`
-  font-size: 1.5vw;
-`;
-
 const Title = styled.span`
   font-size: 5vw;
   font-weight: bold;
-  margin-top: 6vw;
+  margin-top: 4vw;
 `;
 
 const Description = styled.span`
@@ -57,6 +53,11 @@ const ProfilePicture = styled.img`
   height: 25vw;
   border-radius: 50%;
   opacity: 0.5;
+  transition: opacity 800ms;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export default Home;

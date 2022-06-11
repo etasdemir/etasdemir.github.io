@@ -3,21 +3,9 @@ import styled from 'styled-components';
 
 import AboutSection from '../../components/AboutSection';
 import Navigation from '../../nav/Navigation';
-
-const about = [
-  {
-    subtitle: 'summary',
-    description: 'description will be here',
-  },
-  {
-    subtitle: 'skills',
-    description: 'description will be here',
-  },
-  {
-    subtitle: 'experience and education(bunun adı ne olmalı?)',
-    description: 'description will be here',
-  },
-];
+import { ABOUT } from '../../shared/Constants';
+import { AboutElement } from '../../shared/Types';
+import { getAboutDescription } from './AboutDescription';
 
 function About() {
   const aboutRef = useRef(null);
@@ -25,10 +13,10 @@ function About() {
     Navigation.addScreen('about', aboutRef);
   }, []);
 
-  const getTextAlign = (index: number): string => {
-    let textAlign = 'start';
+  const getAlignment = (index: number): string => {
+    let textAlign = 'flex-start';
     if (index % 2 === 1) {
-      textAlign = 'end';
+      textAlign = 'flex-end';
     }
     return textAlign;
   };
@@ -36,9 +24,16 @@ function About() {
   return (
     <Container ref={aboutRef}>
       <Title>About</Title>
-      {about.map((item, index) => (
-        <AboutSection key={item.subtitle + index} subtitle={item.subtitle} description={item.description} textAlignment={getTextAlign(index)} />
-      ))}
+      {ABOUT.map((item: AboutElement, index) => {
+        return (
+          <AboutSection
+            key={item.title + index}
+            title={item.title}
+            subtitle={item.subtitle}
+            description={getAboutDescription(item, index)}
+            alignment={getAlignment(index)} />
+        );
+      })}
     </Container>
   );
 }
