@@ -5,6 +5,7 @@ import { GITHUB_URL } from '../../shared/Constants';
 import Hyperlink from '../../components/Hyperlink';
 import Navigation from '../../nav/Navigation';
 import FeaturedProjectItem from '../../components/FeaturedProjectItem';
+import OtherProjectItem from '../../components/OtherProjectItem';
 
 function Work() {
   const workRef = useRef(null);
@@ -21,6 +22,16 @@ function Work() {
         <FeaturedProjectItem align='right' />
         <FeaturedProjectItem align='left' />
       </ProjectContainer>
+      <OtherProjectTitle>Other Noteworthy Projects</OtherProjectTitle>
+      <OtherProjectGrid>
+        <OtherProjectItem />
+        <OtherProjectItem />
+        <OtherProjectItem />
+        <OtherProjectItem />
+        <OtherProjectItem />
+        <OtherProjectItem />
+        <OtherProjectItem />
+      </OtherProjectGrid>
     </WorkContainer>
   );
 }
@@ -44,6 +55,21 @@ const Description = styled.span`
 `;
 
 const ProjectContainer = styled.div`
+`;
+
+const OtherProjectTitle = styled.span`
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-top: 2em;
+  text-align: center;
+`;
+
+const OtherProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  margin: 2em 0;
 `;
 
 export default Work;

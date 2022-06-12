@@ -30,8 +30,10 @@ const Link = styled.a`
   transition: text-decoration 350ms;
   &::after {
     content: "";
-    background: var(--primary-light);
-    opacity: 0.35;
+    border-radius: 15%;
+    padding: 0.1rem;
+    background: var(--primary);
+    opacity: 0.25;
     position: absolute;
     left: 12px;
     bottom: -6px;

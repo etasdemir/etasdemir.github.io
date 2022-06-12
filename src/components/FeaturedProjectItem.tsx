@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { ProjectInfo } from '../shared/Types';
 
 interface Props {
@@ -20,7 +21,8 @@ function FeaturedProjectItem(props: Props) {
       'Retrofit2',
       'Coroutine',
       'Dagger2'
-    ]
+    ],
+    image: 'https://halcyon-theme.netlify.app/static/demo-30184fa83cb4ab8fb7809cf95cc8aec3.png'
   };
 
   const { align } = props;
@@ -45,7 +47,7 @@ function FeaturedProjectItem(props: Props) {
 
   return (
     <ItemContainer href={info.url} flexAlign={flexProps.flexAlign}>
-      <ProjectImage src='https://halcyon-theme.netlify.app/static/demo-30184fa83cb4ab8fb7809cf95cc8aec3.png' />
+      <ProjectImage src={info.image} />
       <ProjectInfoContainer flexAlign={flexProps.flexAlign}>
         <FeaturedProject>Featured Project</FeaturedProject>
         <ProjectTitle>{info.title}</ProjectTitle>
@@ -77,7 +79,7 @@ const ItemContainer = styled.a<FlexProps>`
   text-decoration: none;
   
   opacity: 0.85;
-  transition: 1500ms;
+  transition: 700ms;
   &:hover {
     opacity: 1;
   }
