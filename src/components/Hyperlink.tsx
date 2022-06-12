@@ -40,7 +40,7 @@ const Link = styled.a`
     width: calc(100% - 8px);
     height: calc(100% - 8px);
     z-index: -1;
-    transition: 350ms cubic-bezier(0.25, 0.1, 0, 2.05);
+    transition: 400ms cubic-bezier(0.25, 0.1, 0, 2.7);
   }
   &:hover:after {
     left: 0;
