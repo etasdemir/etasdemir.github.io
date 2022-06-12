@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AboutElement } from '../../shared/Types';
 import ElementDescription from './ElementDescription';
-import HyperlinkDescription from './HyperlinkContainer';
+import HyperlinkDescription from './HyperlinkDescription';
 import SimpleDescription from './SimpleDescription';
 
 interface Props {

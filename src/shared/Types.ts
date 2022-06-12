@@ -11,3 +11,11 @@ export interface AboutElement {
   descriptions: string[];
   urls?: string[];
 }
+
+export interface ProjectInfo {
+  title: string;
+  description: string;
+  url: string;
+  techStack: string[];
+  image?: string;
+}
