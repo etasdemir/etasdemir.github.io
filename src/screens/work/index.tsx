@@ -6,6 +6,7 @@ import Hyperlink from '../../components/Hyperlink';
 import Navigation from '../../nav/Navigation';
 import FeaturedProjectItem from '../../components/FeaturedProjectItem';
 import OtherProjectItem from '../../components/OtherProjectItem';
+import { ProjectInfo } from '../../shared/Types';
 
 function Work() {
   const workRef = useRef(null);
@@ -13,24 +14,38 @@ function Work() {
     Navigation.addScreen('work', workRef);
   }, []);
 
-  // TODO
-  const projects = PROJECTS[0];
-  
+  const featuredProjects: Array<ProjectInfo> = [];
+  const otherProjects: Array<Omit<ProjectInfo, 'image'>> = [];
+  for (const project of PROJECTS) {
+    if (typeof project.image !== 'undefined') {
+      featuredProjects.push(project);
+    } else {
+      otherProjects.push(project);
+    }
+  }
+
+  const getAlignment = (index: number): "left" | "right" => {
+    let align: "left" | "right" = 'left';
+    if (index % 2 === 1) {
+      align = 'right';
+    }
+    return align;
+  };
+
   return (
     <WorkContainer ref={workRef}>
       <Title>Work</Title>
       <Description>Here are some projects I developed in my spare time. Check out my <Hyperlink url={GITHUB_URL}><span>Github</span></Hyperlink> for more of them.</Description>
       <ProjectContainer>
-        <FeaturedProjectItem align='left' project={projects} />
-        <FeaturedProjectItem align='right' project={projects} />
-        <FeaturedProjectItem align='left' project={projects} />
+        {featuredProjects.map((item, index) => (
+          <FeaturedProjectItem key={item.title + index} align={getAlignment(index)} project={item} />
+        ))}
       </ProjectContainer>
       <OtherProjectTitle>Other Noteworthy Projects</OtherProjectTitle>
       <OtherProjectGrid>
-        <OtherProjectItem project={projects} />
-        <OtherProjectItem project={projects} />
-        <OtherProjectItem project={projects} />
-        <OtherProjectItem project={projects} />
+        {otherProjects.map((item, index) => (
+          <OtherProjectItem key={item.title + index} project={item} />
+        ))}
       </OtherProjectGrid>
     </WorkContainer>
   );

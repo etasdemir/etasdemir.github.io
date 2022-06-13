@@ -61,8 +61,8 @@ const ItemContainer = styled.div<FlexProps>`
 `;
 
 const ProjectImage = styled.img`
-  width: 45rem;
-  height: 40rem;
+  width: 50rem;
+  height: 55rem;
 `;
 
 const ProjectInfoContainer = styled.a<FlexProps>`

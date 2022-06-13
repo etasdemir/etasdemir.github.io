@@ -96,10 +96,80 @@ export const PROJECTS: Array<ProjectInfo> = [
     image: "albedo-collage.webp"
   },
   {
-    title: "",
-    description: "",
-    url: "",
-    techStack: [],
-    image: ""
-  }
+    title: "OpticMap",
+    description: "OpticMap is a on-device optical character recognition Android application. It recognizes text on images and translate recognized texts. Text to speech is available. Save image with recognized text on it. Internet connection only needed for downloading models when a language selected first time.",
+    url: "https://github.com/etasdemir/OpticMap",
+    techStack: [
+      "Kotlin",
+      "MVVM",
+      "MlKit",
+      "TextToSpeech",
+      "Architecture Components",
+      "Coroutine"
+    ],
+    image: "optic-map-collage.webp"
+  },
+  {
+    title: "GPAcademic",
+    description: "Calculate your grade poing average. You can select GPA scale which suits you from most popular ones. Add lessons with their own unique course names, credits and grades and easily manage them. You can calculate GPA of selected lesson. After selecting lessons, you can create a term with given term name and manage these terms You can calculate cumulative GPA from created terms. Available on Google Playstore: https://play.google.com/store/apps/details?id=com.elacqua.gpacademic",
+    url: "https://github.com/etasdemir/GPAcademic",
+    techStack: [
+      "Kotlin",
+      "MVVM",
+      "Hilt",
+      "Architecture Components",
+      "Coroutine"
+    ],
+    image: "gpacademic-collage.webp"
+  },
+  {
+    title: "Leasify",
+    description: "Leasify is a trustless asset leasing smart contract deployed on NEAR testnet. It is written in AssemblyScript. With Leasify, you can buy asset and lease them. With that, you can get periodic income from your asset. Alternatively, you might want to lease an asset instead of buying. You only need to pay lease price periodically.",
+    url: "https://github.com/etasdemir/leasify",
+    techStack: [
+      "AssemblyScript",
+      "NEAR SDK"
+    ],
+  },
+  {
+    title: "FindMyRoute",
+    description: "Work order organizing Android application. After loggin in, you can add locations with marker and move the clicked marker wherever you want. You can look at details of the location but can't update it. After creating locations, you can make a optimized route starting from your location and finished at your location.",
+    url: "https://github.com/etasdemir/FindMyRoute",
+    techStack: [
+      "Kotlin",
+      "MVVM",
+      "Hilt",
+      "Architecture Components",
+      "Retrofit2",
+      "Coroutine",
+      "Google Maps"
+    ],
+  },
+  {
+    title: "GeoTask",
+    description: "Similar to FindMyRoute project but Huawei Mobile Services are used instead of Google Services. I participated in Huawei Coding Marathon 2021 with this project and won 2nd place.",
+    url: "https://github.com/etasdemir/GeoTask",
+    techStack: [
+      "Kotlin",
+      "MVVM",
+      "Hilt",
+      "Architecture Components",
+      "Retrofit2",
+      "Coroutine",
+      "HMS Maps",
+      "HMS Location",
+    ],
+  },
+  {
+    title: "Todo-GraphQL",
+    description: "The purpose of this project is to learn about GraphQL. Simple task management application with authentication.",
+    url: "https://github.com/etasdemir/graphql-example",
+    techStack: [
+      "Node",
+      "GraphQL",
+      "dotenv",
+      "MongoDB",
+      "JWT",
+    ],
+  },
 ];
