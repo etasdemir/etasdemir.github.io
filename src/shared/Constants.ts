@@ -1,4 +1,4 @@
-import { AboutElement, ContactInfo } from "./Types";
+import { AboutElement, ContactInfo, ProjectInfo } from "./Types";
 
 // material color: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=F9A825
 
@@ -79,3 +79,27 @@ export const CONTACT: Array<ContactInfo> = [
   }
 ];
 
+
+export const PROJECTS: Array<ProjectInfo> = [
+  {
+    title: "Albedo",
+    description: "With AlbedoApp you can find most popular anime series, top upcomings, airings, movies, manga and novels. Make searches by anime, manga, character or people. Find anime and manga by genres. Follow weekly anime schedule. Read anime quotes. Track down watched anime, read manga, total watched episode count, favourite quotes, favourite anime and manga. Create custom anime and manga lists.",
+    url: "https://github.com/etasdemir/AlbedoApp",
+    techStack: [
+      "Kotlin",
+      "MVVM",
+      "Dagger2",
+      "Architecture Components",
+      "Retrofit2",
+      "Coroutine"
+    ],
+    image: "albedo-collage.webp"
+  },
+  {
+    title: "",
+    description: "",
+    url: "",
+    techStack: [],
+    image: ""
+  }
+];

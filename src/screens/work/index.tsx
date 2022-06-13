@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-import { GITHUB_URL } from '../../shared/Constants';
+import { GITHUB_URL, PROJECTS } from '../../shared/Constants';
 import Hyperlink from '../../components/Hyperlink';
 import Navigation from '../../nav/Navigation';
 import FeaturedProjectItem from '../../components/FeaturedProjectItem';
@@ -13,24 +13,24 @@ function Work() {
     Navigation.addScreen('work', workRef);
   }, []);
 
+  // TODO
+  const projects = PROJECTS[0];
+  
   return (
     <WorkContainer ref={workRef}>
       <Title>Work</Title>
       <Description>Here are some projects I developed in my spare time. Check out my <Hyperlink url={GITHUB_URL}><span>Github</span></Hyperlink> for more of them.</Description>
       <ProjectContainer>
-        <FeaturedProjectItem align='left' />
-        <FeaturedProjectItem align='right' />
-        <FeaturedProjectItem align='left' />
+        <FeaturedProjectItem align='left' project={projects} />
+        <FeaturedProjectItem align='right' project={projects} />
+        <FeaturedProjectItem align='left' project={projects} />
       </ProjectContainer>
       <OtherProjectTitle>Other Noteworthy Projects</OtherProjectTitle>
       <OtherProjectGrid>
-        <OtherProjectItem />
-        <OtherProjectItem />
-        <OtherProjectItem />
-        <OtherProjectItem />
-        <OtherProjectItem />
-        <OtherProjectItem />
-        <OtherProjectItem />
+        <OtherProjectItem project={projects} />
+        <OtherProjectItem project={projects} />
+        <OtherProjectItem project={projects} />
+        <OtherProjectItem project={projects} />
       </OtherProjectGrid>
     </WorkContainer>
   );

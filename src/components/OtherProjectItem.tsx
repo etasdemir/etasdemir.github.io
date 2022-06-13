@@ -3,29 +3,19 @@ import styled from 'styled-components';
 
 import { ProjectInfo } from '../shared/Types';
 
-function OtherProjectItem() {
-  // TODO
-  const info: ProjectInfo = {
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    url: 'https://github.com/etasdemir',
-    techStack: [
-      'Android',
-      'Kotlin',
-      'MVVM',
-      'Architecture Components',
-      'Retrofit2',
-      'Coroutine',
-      'Dagger2'
-    ]
-  };
+interface Props {
+  project: ProjectInfo;
+}
 
+function OtherProjectItem(props: Props) {
+  const { project } = props;
+  
   return (
-    <ProjectContainer href={info.url}>
-      <ProjectTitle>{info.title}</ProjectTitle>
-      <ProjectDescripton>{info.description}</ProjectDescripton>
+    <ProjectContainer href={project.url}>
+      <ProjectTitle>{project.title}</ProjectTitle>
+      <ProjectDescripton>{project.description}</ProjectDescripton>
       <TechStackContainer>
-        {info.techStack.map((item, index) => <TechStackName key={index}>{item}</TechStackName>)}
+        {project.techStack.map((item, index) => <TechStackName key={index}>{item}</TechStackName>)}
       </TechStackContainer>
     </ProjectContainer>
   );

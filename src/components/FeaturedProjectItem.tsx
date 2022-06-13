@@ -5,27 +5,11 @@ import { ProjectInfo } from '../shared/Types';
 
 interface Props {
   align: 'left' | 'right';
+  project: ProjectInfo
 }
 
 function FeaturedProjectItem(props: Props) {
-  // TODO
-  const info: ProjectInfo = {
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    url: 'https://github.com/etasdemir',
-    techStack: [
-      'Android',
-      'Kotlin',
-      'MVVM',
-      'Architecture Components',
-      'Retrofit2',
-      'Coroutine',
-      'Dagger2'
-    ],
-    image: 'https://halcyon-theme.netlify.app/static/demo-30184fa83cb4ab8fb7809cf95cc8aec3.png'
-  };
-
-  const { align } = props;
+  const { align, project } = props;
   let flexProps: FlexProps = {};
   if (align === 'left') {
     flexProps = {
@@ -46,14 +30,14 @@ function FeaturedProjectItem(props: Props) {
   }
 
   return (
-    <ItemContainer href={info.url} flexAlign={flexProps.flexAlign}>
-      <ProjectImage src={info.image} />
-      <ProjectInfoContainer flexAlign={flexProps.flexAlign}>
+    <ItemContainer flexAlign={flexProps.flexAlign}>
+      <ProjectImage src={require('../assets/' + project.image)} />
+      <ProjectInfoContainer href={project.url} flexAlign={flexProps.flexAlign}>
         <FeaturedProject>Featured Project</FeaturedProject>
-        <ProjectTitle>{info.title}</ProjectTitle>
-        <ProjectDescription>{info.description}</ProjectDescription>
+        <ProjectTitle>{project.title}</ProjectTitle>
+        <ProjectDescription>{project.description}</ProjectDescription>
         <TechStackContainer flexAlign={flexProps.flexAlign}>
-          {info.techStack.map((item, index) => <TechStackName key={index}>{item}</TechStackName>)}
+          {project.techStack.map((item, index) => <TechStackName key={index}>{item}</TechStackName>)}
         </TechStackContainer>
       </ProjectInfoContainer>
     </ItemContainer>
@@ -68,29 +52,20 @@ interface FlexProps {
   };
 }
 
-const ItemContainer = styled.a<FlexProps>`
+const ItemContainer = styled.div<FlexProps>`
   position: relative;
   display: flex;
   flex-direction: ${({ flexAlign }) => flexAlign?.flex};
   align-items: center;
   margin: 4em 0;
-  cursor: pointer;
-  color: initial;
-  text-decoration: none;
-  
-  opacity: 0.85;
-  transition: 700ms;
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 const ProjectImage = styled.img`
-  width: 50rem;
-  height: 35rem;
+  width: 45rem;
+  height: 40rem;
 `;
 
-const ProjectInfoContainer = styled.div<FlexProps>`
+const ProjectInfoContainer = styled.a<FlexProps>`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -102,6 +77,10 @@ const ProjectInfoContainer = styled.div<FlexProps>`
   background-color: var(--page-background);
   border-radius: 30px;
   padding: 15px;
+
+  color: initial;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 const FeaturedProject = styled.span`
