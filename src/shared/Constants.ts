@@ -167,7 +167,6 @@ export const PROJECTS: Array<ProjectInfo> = [
     techStack: [
       "Node",
       "GraphQL",
-      "dotenv",
       "MongoDB",
       "JWT",
     ],

@@ -58,7 +58,7 @@ const ScrollButton = styled.div`
   top: 30%;
   left: 75%;
   border-radius: 50%;
-  background-color: var(--primary-light);
+  background-color: var(--primary);
   opacity: 0.5;
   cursor: pointer;
 

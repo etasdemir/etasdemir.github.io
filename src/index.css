@@ -21,11 +21,11 @@ body {
 }
 
 :root {
-    --primary-light: #F8D2B7;
-    --primary: #f9a825;
-    --primary-dark: #c17900;
+    --primary-light: #ffe29a77;
+    --primary: #ffb06b;
+    --primary-dark: #c9803e;
     --grey: #9e9e9e;
-    --page-background: #ffdecf;
+    --page-background: #fff8e1;
 }
 
 code {
