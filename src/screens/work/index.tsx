@@ -65,7 +65,7 @@ const Title = styled.span`
 `;
 
 const Description = styled.span`
-  font-size: 2.5rem;
+  font-size: 2rem;
   width: 50%;
 `;
 

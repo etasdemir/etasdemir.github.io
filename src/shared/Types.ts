@@ -18,4 +18,6 @@ export interface ProjectInfo {
   url: string;
   techStack: string[];
   image?: string;
+  playStoreLink?: string;
+  appStoreLink?: string;
 }

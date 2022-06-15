@@ -53,7 +53,7 @@ const MenuItem = styled.div`
 `;
 
 const MenuText = styled.span`
-  font-size: 1.4em;
+  font-size: 1.4rem;
 
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);

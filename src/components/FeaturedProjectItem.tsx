@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ProjectInfo } from '../shared/Types';
+import AppStoreBadge from './AppStoreBadge';
 
 interface Props {
   align: 'left' | 'right';
@@ -36,6 +37,7 @@ function FeaturedProjectItem(props: Props) {
         <FeaturedProject>Featured Project</FeaturedProject>
         <ProjectTitle>{project.title}</ProjectTitle>
         <ProjectDescription>{project.description}</ProjectDescription>
+        <AppStoreBadge appStoreLink={project.appStoreLink} playStoreLink={project.playStoreLink} />
         <TechStackContainer flexAlign={flexProps.flexAlign}>
           {project.techStack.map((item, index) => <TechStackName key={index}>{item}</TechStackName>)}
         </TechStackContainer>
@@ -61,8 +63,9 @@ const ItemContainer = styled.div<FlexProps>`
 `;
 
 const ProjectImage = styled.img`
-  width: 50rem;
+  width: 55rem;
   height: 55rem;
+  border-radius: 5%;
 `;
 
 const ProjectInfoContainer = styled.a<FlexProps>`
@@ -76,7 +79,7 @@ const ProjectInfoContainer = styled.a<FlexProps>`
   z-index: 2;
   background-color: var(--page-background);
   border-radius: 30px;
-  padding: 15px;
+  padding: 1.5em 2.5em;
 
   color: initial;
   text-decoration: none;

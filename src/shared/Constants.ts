@@ -102,16 +102,16 @@ export const PROJECTS: Array<ProjectInfo> = [
     techStack: [
       "Kotlin",
       "MVVM",
-      "MlKit",
+      "MLKit",
       "TextToSpeech",
       "Architecture Components",
       "Coroutine"
     ],
-    image: "optic-map-collage.webp"
+    image: "optic-map-collage.webp",
   },
   {
     title: "GPAcademic",
-    description: "Calculate your grade poing average. You can select GPA scale which suits you from most popular ones. Add lessons with their own unique course names, credits and grades and easily manage them. You can calculate GPA of selected lesson. After selecting lessons, you can create a term with given term name and manage these terms You can calculate cumulative GPA from created terms. Available on Google Playstore: https://play.google.com/store/apps/details?id=com.elacqua.gpacademic",
+    description: "Calculate your grade poing average. You can select GPA scale which suits you from most popular ones. Add lessons with their own unique course names, credits and grades and easily manage them. You can calculate GPA of selected lesson. After selecting lessons, you can create a term with given term name and manage these terms You can calculate cumulative GPA from created terms. Available on Google Playstore.",
     url: "https://github.com/etasdemir/GPAcademic",
     techStack: [
       "Kotlin",
@@ -120,7 +120,8 @@ export const PROJECTS: Array<ProjectInfo> = [
       "Architecture Components",
       "Coroutine"
     ],
-    image: "gpacademic-collage.webp"
+    image: "gpacademic-collage.webp",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.elacqua.gpacademic",
   },
   {
     title: "Leasify",
