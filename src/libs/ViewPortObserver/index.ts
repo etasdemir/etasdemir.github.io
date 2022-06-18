@@ -1,5 +1,5 @@
 import AppereadViewAnimator from "./AppereadViewAnimator";
-import { withObservable } from "./Observable";
+import { withObservable } from "./ObservableHoC";
 
 export default AppereadViewAnimator;
 export { withObservable };
