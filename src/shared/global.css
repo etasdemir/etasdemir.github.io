@@ -1,5 +1,5 @@
 .slide-up-from-bottom {
-    animation: 900ms cubic-bezier(.31,.15,.09,.91) 0s 1 normal forwards appearFromBottom
+    animation: 1150ms cubic-bezier(.7,-0.42,.14,.9) 0s 1 normal forwards appearFromBottom
 }
 
 @keyframes appearFromBottom {

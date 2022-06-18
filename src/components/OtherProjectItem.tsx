@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useCombinedRefs } from '../libs/CombineRefs';
+import { withObservable } from '../libs/ViewPortObserver';
 
-import { ProjectInfo } from '../shared/Types';
+import { ProjectInfo, WithObservableRef } from '../shared/Types';
 
-interface Props {
+interface Props extends WithObservableRef {
   project: ProjectInfo;
 }
 
 function OtherProjectItem(props: Props) {
-  const { project } = props;
-  
+  const { project, observableRef } = props;
+
   return (
-    <ProjectContainer href={project.url}>
+    <ProjectContainer ref={useCombinedRefs(observableRef)} href={project.url}>
       <ProjectTitle>{project.title}</ProjectTitle>
       <ProjectDescripton>{project.description}</ProjectDescripton>
       <TechStackContainer>
@@ -69,4 +71,4 @@ const TechStackName = styled.span`
   font-size: 1rem;
 `;
 
-export default OtherProjectItem;
+export default withObservable(OtherProjectItem);

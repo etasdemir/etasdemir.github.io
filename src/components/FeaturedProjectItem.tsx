@@ -1,16 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useCombinedRefs } from '../libs/CombineRefs';
+import { withObservable } from '../libs/ViewPortObserver';
 
-import { ProjectInfo } from '../shared/Types';
+import { ProjectInfo, WithObservableRef } from '../shared/Types';
 import AppStoreBadge from './AppStoreBadge';
 
-interface Props {
+interface Props extends WithObservableRef {
   align: 'left' | 'right';
   project: ProjectInfo;
 }
 
 function FeaturedProjectItem(props: Props) {
-  const { align, project } = props;
+  const { align, project, observableRef } = props;
   let flexProps: FlexProps = {};
   if (align === 'left') {
     flexProps = {
@@ -31,7 +33,7 @@ function FeaturedProjectItem(props: Props) {
   }
 
   return (
-    <ItemContainer flexAlign={flexProps.flexAlign}>
+    <ItemContainer ref={useCombinedRefs(observableRef)} flexAlign={flexProps.flexAlign}>
       <ProjectImage src={require('../assets/' + project.image)} />
       <ProjectInfoContainer flexAlign={flexProps.flexAlign}>
         <ProjectLink href={project.url} flexAlign={flexProps.flexAlign}>
@@ -132,4 +134,4 @@ const TechStackName = styled.span`
   font-size: 1rem;
 `;
 
-export default FeaturedProjectItem;
+export default withObservable(FeaturedProjectItem);

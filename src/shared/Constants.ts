@@ -148,7 +148,7 @@ export const PROJECTS: Array<ProjectInfo> = [
   },
   {
     title: "GeoTask",
-    description: "Similar to FindMyRoute project but Huawei Mobile Services are used instead of Google Services. I participated in Huawei Coding Marathon 2021 with this project and won 2nd place.",
+    description: "Similar to FindMyRoute project but Huawei Mobile Services are used instead of Google Services. I participated in Huawei-BTK Coding Marathon 2021 with this project and won 2nd place.",
     url: "https://github.com/etasdemir/GeoTask",
     techStack: [
       "Kotlin",

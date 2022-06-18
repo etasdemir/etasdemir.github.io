@@ -4,11 +4,16 @@ import styled from 'styled-components';
 import { GITHUB_URL, PROJECTS } from '../../shared/Constants';
 import Hyperlink from '../../components/Hyperlink';
 import Navigation from '../../nav/Navigation';
-import FeaturedProjectItem from '../../components/FeaturedProjectItem';
-import OtherProjectItem from '../../components/OtherProjectItem';
-import { ProjectInfo } from '../../shared/Types';
+import { ProjectInfo, WithObservableRef } from '../../shared/Types';
+import OtherProjects from './OtherProjects';
+import FeaturedProjects from './FeaturedProjects';
+import { withObservable } from '../../libs/ViewPortObserver';
+import { useCombinedRefs } from '../../libs/CombineRefs';
 
-function Work() {
+type Props = WithObservableRef;
+
+function Work(props: Props) {
+  const { observableRef } = props;
   const workRef = useRef(null);
   useEffect(() => {
     Navigation.addScreen('work', workRef);
@@ -24,29 +29,14 @@ function Work() {
     }
   }
 
-  const getAlignment = (index: number): "left" | "right" => {
-    let align: "left" | "right" = 'left';
-    if (index % 2 === 1) {
-      align = 'right';
-    }
-    return align;
-  };
-
   return (
     <WorkContainer ref={workRef}>
-      <Title>Work</Title>
-      <Description>Here are some projects I developed in my spare time. Check out my <Hyperlink url={GITHUB_URL}><span>Github</span></Hyperlink> for more of them.</Description>
-      <ProjectContainer>
-        {featuredProjects.map((item, index) => (
-          <FeaturedProjectItem key={item.title + index} align={getAlignment(index)} project={item} />
-        ))}
-      </ProjectContainer>
-      <OtherProjectTitle>Other Noteworthy Projects</OtherProjectTitle>
-      <OtherProjectGrid>
-        {otherProjects.map((item, index) => (
-          <OtherProjectItem key={item.title + index} project={item} />
-        ))}
-      </OtherProjectGrid>
+      <EntryTextContainer ref={useCombinedRefs(observableRef)}>
+        <Title>Work</Title>
+        <Description>Here are some projects I developed in my spare time. Check out my <Hyperlink url={GITHUB_URL}><span>Github</span></Hyperlink> for more of them.</Description>
+      </EntryTextContainer>
+      <FeaturedProjects featuredProjects={featuredProjects} />
+      <OtherProjects otherProjects={otherProjects} />
     </WorkContainer>
   );
 }
@@ -58,33 +48,20 @@ const WorkContainer = styled.div`
   min-height: 100vh;
 `;
 
+const EntryTextContainer = styled.div`
+`;
+
 const Title = styled.span`
   font-size: 5rem;
   font-weight: bold;
   margin-bottom: 0.5em;
+  display: block;
 `;
 
 const Description = styled.span`
   font-size: 2rem;
   width: 50%;
+  display: inline-block;
 `;
 
-const ProjectContainer = styled.div`
-`;
-
-const OtherProjectTitle = styled.span`
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-top: 2em;
-  text-align: center;
-`;
-
-const OtherProjectGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px;
-  margin: 2em 0;
-`;
-
-export default Work;
+export default withObservable(Work);
