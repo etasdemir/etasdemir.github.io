@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useCombinedRefs } from '../libs/CombineRefs';
+import { withObservable } from '../libs/ViewPortObserver';
+import { WithObservableRef } from '../shared/Types';
 
-interface Props {
+interface Props extends WithObservableRef {
   title: string;
   subtitle?: string;
   description: JSX.Element | JSX.Element[];
@@ -13,14 +16,19 @@ interface Align {
 }
 
 function AboutSection(props: Props) {
-  const { title, subtitle, description, alignment } = props;
+  const { title, subtitle, description, alignment, observableRef, shouldAnimate } = props;
+  const combineRefCallback = useCombinedRefs(observableRef);
 
   return (
-    <Container align={alignment}>
+    <Container ref={(ref) => {
+      if (shouldAnimate === false) {
+        return;
+      }
+      combineRefCallback(ref);
+    }} align={alignment}>
       <Title>{title}</Title>
       {typeof subtitle !== "undefined" ? <Subtitle>{subtitle}</Subtitle> : null}
       {description}
-      <Separator />
     </Container>
   );
 }
@@ -28,7 +36,7 @@ function AboutSection(props: Props) {
 const Container = styled.div<Align>`
   display: flex;
   flex-direction: column;
-  align-items: ${({align}) => align};
+  align-items: ${({ align }) => align};
   margin: 4em 6em;
 `;
 
@@ -44,13 +52,4 @@ const Subtitle = styled.span`
   font-weight: 400;
 `;
 
-const Separator = styled.div`
-  position: absolute;
-  left: 0px;
-  right: var(--side-menu-width);
-  z-index: -1;
-  height: 1px;
-  background-color: var(--grey);
-`;
-
-export default AboutSection;
+export default withObservable(AboutSection);

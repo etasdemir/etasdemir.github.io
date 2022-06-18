@@ -2,20 +2,27 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 import ContactItem from '../../components/ContactItem';
+import { useCombinedRefs } from '../../libs/CombineRefs';
+import { withObservable } from '../../libs/ViewPortObserver';
 import Navigation from '../../nav/Navigation';
 import { CONTACT } from '../../shared/Constants';
+import { WithObservableRef } from '../../shared/Types';
 
-function Contact() {
+type Props = WithObservableRef;
+
+function Contact(props: Props) {
+  const { observableRef } = props;
+
   const contactRef = useRef(null);
   useEffect(() => {
     Navigation.addScreen('contact', contactRef);
   }, []);
 
   return (
-    <Container ref={contactRef}>
+    <Container ref={useCombinedRefs(contactRef)}>
       <InfoContainer>
-        <EndGreeting>Thank you for visiting!</EndGreeting>
-        <ContactContainer>
+        <EndGreeting ref={useCombinedRefs(observableRef)}>Thank you for visiting!</EndGreeting>
+        <ContactContainer ref={useCombinedRefs(observableRef)}>
           {CONTACT.map((item, index) => (
             <ContactItem key={item.url + index} paddingStart={index * 20} contact={item} />
           ))}
@@ -78,4 +85,4 @@ const ScrollButtonText = styled.span`
   font-weight: bold;
 `;
 
-export default Contact;  
+export default withObservable(Contact);  

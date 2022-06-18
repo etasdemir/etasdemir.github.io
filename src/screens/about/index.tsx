@@ -27,7 +27,7 @@ function About(props: Props) {
   };
 
   return (
-    <Container ref={useCombinedRefs(aboutRef, observableRef)}>
+    <Container ref={useCombinedRefs(aboutRef)}>
       <Title ref={useCombinedRefs(observableRef)}>About</Title>
       {ABOUT.map((item: AboutElement, index) => {
         return (

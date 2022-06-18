@@ -24,4 +24,5 @@ export interface ProjectInfo {
 
 export interface WithObservableRef {
   observableRef: React.RefObject<HTMLElement>;
+  shouldAnimate?: boolean
 }
