@@ -1,4 +1,5 @@
 .slide-up-from-bottom {
+    /* animation: 750ms linear 0s 1 normal forwards appearFromBottom */
     animation: 1150ms cubic-bezier(.7,-0.42,.14,.9) 0s 1 normal forwards appearFromBottom
 }
 
@@ -7,6 +8,21 @@
         transform: translateY(+100%);
         opacity: 0;
     }
+
+    /* 25% {
+        transform: translateY(+75%);
+        opacity: 0.25;
+    }
+
+    50% {
+        transform: translateY(+50%);
+        opacity: 0.5;
+    }
+
+    75% {
+        transform: translateY(+25%);
+        opacity: 0.75;
+    } */
 
     100% {
         transform: translateY(0);
