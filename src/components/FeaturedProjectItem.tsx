@@ -6,7 +6,7 @@ import AppStoreBadge from './AppStoreBadge';
 
 interface Props {
   align: 'left' | 'right';
-  project: ProjectInfo
+  project: ProjectInfo;
 }
 
 function FeaturedProjectItem(props: Props) {
@@ -33,10 +33,12 @@ function FeaturedProjectItem(props: Props) {
   return (
     <ItemContainer flexAlign={flexProps.flexAlign}>
       <ProjectImage src={require('../assets/' + project.image)} />
-      <ProjectInfoContainer href={project.url} flexAlign={flexProps.flexAlign}>
-        <FeaturedProject>Featured Project</FeaturedProject>
-        <ProjectTitle>{project.title}</ProjectTitle>
-        <ProjectDescription>{project.description}</ProjectDescription>
+      <ProjectInfoContainer flexAlign={flexProps.flexAlign}>
+        <ProjectLink href={project.url} flexAlign={flexProps.flexAlign}>
+          <FeaturedProject>Featured Project</FeaturedProject>
+          <ProjectTitle>{project.title}</ProjectTitle>
+          <ProjectDescription>{project.description}</ProjectDescription>
+        </ProjectLink>
         <AppStoreBadge appStoreLink={project.appStoreLink} playStoreLink={project.playStoreLink} />
         <TechStackContainer flexAlign={flexProps.flexAlign}>
           {project.techStack.map((item, index) => <TechStackName key={index}>{item}</TechStackName>)}
@@ -68,18 +70,26 @@ const ProjectImage = styled.img`
   border-radius: 5%;
 `;
 
-const ProjectInfoContainer = styled.a<FlexProps>`
+const ProjectInfoContainer = styled.div<FlexProps>`
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: ${({ flexAlign }) => flexAlign?.align};
-  width: 60%;
+  width: 62%;
   left: ${({ flexAlign }) => flexAlign?.pos === 'right' ? 0 : 'initial'};
   right: ${({ flexAlign }) => flexAlign?.pos === 'left' ? 0 : 'initial'};
   z-index: 2;
   background-color: var(--page-background);
   border-radius: 30px;
   padding: 1.5em 2.5em;
+`;
+
+const ProjectLink = styled.a<FlexProps>`
+  display: flex;
+  flex-direction: column;
+  align-items: ${({ flexAlign }) => flexAlign?.align};
+  left: ${({ flexAlign }) => flexAlign?.pos === 'right' ? 0 : 'initial'};
+  right: ${({ flexAlign }) => flexAlign?.pos === 'left' ? 0 : 'initial'};
 
   color: initial;
   text-decoration: none;

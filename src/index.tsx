@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import styled from 'styled-components';
 
-import './index.css';
+import './shared/global.css';
 import About from './screens/about';
 import Contact from './screens/contact';
 import Home from './screens/home';
 import Work from './screens/work';
 import SideMenu from './nav/SideMenu';
+
+import './index.css';
 
 const SectionContainer = styled.div`
   display: block;

@@ -5,9 +5,13 @@ import AboutSection from '../../components/AboutSection';
 import AboutDescription from '../../components/AboutDescription';
 import Navigation from '../../nav/Navigation';
 import { ABOUT } from '../../shared/Constants';
-import { AboutElement } from '../../shared/Types';
+import { AboutElement, WithObservableRef } from '../../shared/Types';
+import { withObservable } from '../../libs/ViewPortObserver';
 
-function About() {
+type Props = WithObservableRef
+
+function About(props: Props) {
+  const { observableRef } = props;
   const aboutRef = useRef(null);
   useEffect(() => {
     Navigation.addScreen('about', aboutRef);
@@ -23,7 +27,7 @@ function About() {
 
   return (
     <Container ref={aboutRef}>
-      <Title>About</Title>
+      <Title ref={observableRef}>About</Title>
       {ABOUT.map((item: AboutElement, index) => {
         return (
           <AboutSection
@@ -51,4 +55,4 @@ const Title = styled.h1`
   text-align: end;
 `;
 
-export default About;  
+export default withObservable(About);  

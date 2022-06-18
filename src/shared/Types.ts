@@ -21,3 +21,7 @@ export interface ProjectInfo {
   playStoreLink?: string;
   appStoreLink?: string;
 }
+
+export interface WithObservableRef {
+  observableRef: React.MutableRefObject<null>;
+}
