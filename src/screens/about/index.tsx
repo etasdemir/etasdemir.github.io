@@ -7,8 +7,9 @@ import Navigation from '../../nav/Navigation';
 import { ABOUT } from '../../shared/Constants';
 import { AboutElement, WithObservableRef } from '../../shared/Types';
 import { withObservable } from '../../libs/ViewPortObserver';
+import { useCombinedRefs } from '../../libs/CombineRefs';
 
-type Props = WithObservableRef
+type Props = WithObservableRef;
 
 function About(props: Props) {
   const { observableRef } = props;
@@ -26,8 +27,8 @@ function About(props: Props) {
   };
 
   return (
-    <Container ref={aboutRef}>
-      <Title ref={observableRef}>About</Title>
+    <Container ref={useCombinedRefs(aboutRef, observableRef)}>
+      <Title ref={useCombinedRefs(observableRef)}>About</Title>
       {ABOUT.map((item: AboutElement, index) => {
         return (
           <AboutSection

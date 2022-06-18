@@ -23,5 +23,5 @@ export interface ProjectInfo {
 }
 
 export interface WithObservableRef {
-  observableRef: React.MutableRefObject<null>;
+  observableRef: React.RefObject<HTMLElement>;
 }

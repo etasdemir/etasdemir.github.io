@@ -10,15 +10,15 @@ export function withObservable<T extends WithObservableRef>(
     WrappedComponent.displayName || WrappedComponent.name || "Component";
 
   const ComponentWithRef = (props: Omit<T, keyof WithObservableRef>) => {
-    const ref = useRef<React.MutableRefObject<null>>(null);
+    const ref: WithObservableRef['observableRef'] = useRef(null);
 
     useEffect(() => {
       if (ref.current) {
-        AppereadViewAnimator.observeElement(ref.current as unknown as HTMLElement);
+        AppereadViewAnimator.observeElement(ref.current);
       }
       return () => {
         if (ref.current) {
-          AppereadViewAnimator.unobserveElement(ref.current as unknown as HTMLElement);
+          AppereadViewAnimator.unobserveElement(ref.current);
         }
       };
     }, []);

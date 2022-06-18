@@ -14,7 +14,7 @@ class AppereadViewAnimator {
       .map((_, index) => index / steps || 0);
     const options: IntersectionObserverInit = {
       root: null,
-      threshold: thresholdArray(20),
+      threshold: thresholdArray(10),
       rootMargin: '0px',
     };
     this.startAnimation = this.startAnimation.bind(this);
@@ -22,19 +22,20 @@ class AppereadViewAnimator {
   }
 
   onScrollDownEnter(entry: IntersectionObserverEntry) {
-    entry.target.classList.add("slide-in-from-right");
+    entry.target.classList.remove("slide-up-from-bottom");
+    entry.target.classList.add("slide-up-from-bottom");
   }
 
   onScrollDownLeave(entry: IntersectionObserverEntry) {
-    entry.target.classList.remove("slide-in-from-right");
+    entry.target.classList
   }
 
   onScrollUpEnter(entry: IntersectionObserverEntry) {
-    entry.target.classList;
+    entry.target.classList
   }
 
   onScrollUpLeave(entry: IntersectionObserverEntry) {
-    entry.target.classList;
+    entry.target.classList
   }
 
   // Even initial y and prev ratio is 0, startAnimation called on page load. These fields be set while not intersecting.
