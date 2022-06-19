@@ -1,3 +1,5 @@
+import './animation.css';
+
 interface PositionState {
   previousY: number,
   previousRatio: number;

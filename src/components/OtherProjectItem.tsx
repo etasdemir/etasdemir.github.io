@@ -42,15 +42,15 @@ const ProjectContainer = styled.a`
 const ProjectTitle = styled.span`
   display: block;
   text-align: center;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 500;
 `;
 
 const ProjectDescripton = styled.span`
   display: block;
   text-align: center;
   color: black;
-  font-size: 1.1rem;
+  font-size: 2rem;
   margin: 1em 0;
 `;
 
@@ -68,7 +68,7 @@ const TechStackName = styled.span`
   color: var(--primary-dark);
   padding: 1% 2%;
   border-radius: 15px;
-  font-size: 1rem;
+  font-size: 2rem;
 `;
 
 export default withObservable(OtherProjectItem);

@@ -52,7 +52,7 @@ const Container = styled.div<ContainerProps>`
 
 const CopiedText = styled.span<CopiedTextProps>`
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 2rem;
   letter-spacing: 0.2vw;
   font-weight: 600;
   opacity: ${({ opacity }) => opacity};
@@ -67,12 +67,12 @@ const Name = styled.span`
   -ms-user-select: text;
   user-select: text;
 
-  font-size: 2rem;
+  font-size: 2.4rem;
   display: inline-block;
 `;
 
 const Button = styled.div`
-  font-size: 1.8em;
+  font-size: 2.2em;
   font-weight: 600;
   cursor: pointer;
   transition: transform 500ms;

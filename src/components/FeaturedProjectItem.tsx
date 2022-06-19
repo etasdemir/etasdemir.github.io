@@ -67,8 +67,8 @@ const ItemContainer = styled.div<FlexProps>`
 `;
 
 const ProjectImage = styled.img`
-  width: 55rem;
-  height: 55rem;
+  width: 80rem;
+  height: 80rem;
   border-radius: 5%;
 `;
 
@@ -82,7 +82,7 @@ const ProjectInfoContainer = styled.div<FlexProps>`
   right: ${({ flexAlign }) => flexAlign?.pos === 'left' ? 0 : 'initial'};
   z-index: 2;
   background-color: var(--page-background);
-  border-radius: 30px;
+  border-radius: 3rem;
   padding: 1.5em 2.5em;
 `;
 
@@ -101,19 +101,19 @@ const ProjectLink = styled.a<FlexProps>`
 const FeaturedProject = styled.span`
   color: var(--primary-dark);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 `;
 
 const ProjectTitle = styled.span`
   color: var(--primary-dark);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3.5rem;
 `;
 
 const ProjectDescription = styled.span`
   text-align: left;
   margin: 1em 0;
-  font-size: 1rem;
+  font-size: 2.1rem;
   color: black;
 `;
 
@@ -131,7 +131,7 @@ const TechStackName = styled.span`
   color: var(--primary-dark);
   padding: 0.5% 1%;
   border-radius: 15px;
-  font-size: 1rem;
+  font-size: 2rem;
 `;
 
 export default withObservable(FeaturedProjectItem);

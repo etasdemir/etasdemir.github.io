@@ -42,13 +42,13 @@ const Container = styled.div<Align>`
 
 const Title = styled.span`
   letter-spacing: 3px;
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
 `;
 
 const Subtitle = styled.span`
   margin-top: 0.5em;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
 `;
 

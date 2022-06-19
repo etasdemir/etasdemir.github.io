@@ -52,14 +52,14 @@ const EntryTextContainer = styled.div`
 `;
 
 const Title = styled.span`
-  font-size: 5rem;
+  font-size: 7rem;
   font-weight: bold;
   margin-bottom: 0.5em;
   display: block;
 `;
 
 const Description = styled.span`
-  font-size: 2rem;
+  font-size: 3rem;
   width: 50%;
   display: inline-block;
 `;

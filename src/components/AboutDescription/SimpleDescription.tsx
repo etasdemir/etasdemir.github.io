@@ -13,8 +13,8 @@ function SimpleDescription(props: Props) {
 }
 
 const Description = styled.span`
-  font-size: 1.4rem;
-  margin-top: 0.5em;
+  font-size: 2.1rem;
+  margin-top: 1em;
   font-weight: 300;
 `;
 

@@ -5,6 +5,7 @@ import { ProjectInfo, WithObservableRef } from '../../shared/Types';
 import OtherProjectItem from '../../components/OtherProjectItem';
 import { withObservable } from '../../libs/ViewPortObserver';
 import { useCombinedRefs } from '../../libs/CombineRefs';
+import { device } from '../../shared/Constants';
 
 interface Props extends WithObservableRef {
   otherProjects: Array<Omit<ProjectInfo, 'image'>>;
@@ -27,17 +28,25 @@ function OtherProjects(props: Props) {
 
 const OtherProjectTitle = styled.span`
   display: block;
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 3.5rem;
+  font-weight: 500;
   margin-top: 2em;
   text-align: center;
 `;
 
 const OtherProjectGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   padding: 10px;
   margin: 2em 0;
+  
+  @media ${device.tablet} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media ${device.laptop} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export default withObservable(OtherProjects);  

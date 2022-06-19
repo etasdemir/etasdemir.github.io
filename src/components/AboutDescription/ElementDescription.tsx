@@ -24,7 +24,7 @@ const ElementContainer = styled.div`
 `;
 
 const Description = styled.span`
-  font-size: 1.4rem;
+  font-size: 2.1rem;
   margin-top: 0.5em;
   font-weight: 300;
   &::before {

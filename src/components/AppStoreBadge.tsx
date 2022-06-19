@@ -31,12 +31,12 @@ const IconContainer = styled.div`
 `;
 
 const IconLink = styled.a`
-  margin: 0 0.7rem 0.7rem 0.7rem;
+  margin: 0 1rem 1rem 1rem;
 `;
 
 const Icon = styled.img`
-  height: 2.5rem;
-  width: 8.3rem;
+  height: 4.8rem;
+  width: 14rem;
 `;
 
 export default AppStoreBadge;  

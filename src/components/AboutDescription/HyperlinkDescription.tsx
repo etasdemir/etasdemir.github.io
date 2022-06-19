@@ -30,7 +30,7 @@ const LinkContainer = styled.div`
 `;
 
 const NewsletterLink = styled.a`
-  font-size: 1.4rem;
+  font-size: 2.1rem;
   font-weight: 300;
   display: block;
   transition: transform 500ms;

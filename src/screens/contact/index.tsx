@@ -49,7 +49,7 @@ const InfoContainer = styled.div`
 
 const EndGreeting = styled.span`
   letter-spacing: 3px;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 400;
 `;
 
@@ -69,7 +69,7 @@ const ScrollButton = styled.div`
   opacity: 0.5;
   cursor: pointer;
 
-  padding: 5rem 2rem;
+  padding: 8rem 3.2rem;
   transition: 500ms;
 
   &:hover {
@@ -80,7 +80,7 @@ const ScrollButton = styled.div`
 
 const ScrollButtonText = styled.span`
   opacity: 1;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   color: black;
   font-weight: bold;
 `;

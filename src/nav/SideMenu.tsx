@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import { device } from '../shared/Constants';
 import Navigation from './Navigation';
 
 function SideMenu() {
@@ -26,21 +28,26 @@ function SideMenu() {
 }
 
 const MenuContainer = styled.div`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: var(--side-menu-width);
-  height: 100vh;
-  z-index: 10;
-  
-  border-width: 0;
-  border-left: 1px;
-  border-style: solid;
-  border-color: var(--grey);
+  @media ${device.mobileS} {
+    display: none;
+  }
+  @media ${device.laptop} { 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: var(--side-menu-width);
+    height: 100vh;
+    z-index: 10;
+    
+    border-width: 0;
+    border-left: 1px;
+    border-style: solid;
+    border-color: var(--grey);
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const MenuItem = styled.div`
@@ -53,7 +60,7 @@ const MenuItem = styled.div`
 `;
 
 const MenuText = styled.span`
-  font-size: 1.4rem;
+  font-size: 2rem;
 
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);

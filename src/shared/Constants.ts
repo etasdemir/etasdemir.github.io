@@ -1,12 +1,31 @@
 import { AboutElement, ContactInfo, ProjectInfo } from "./Types";
 
-// material color: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=F9A825
-
 export const EMAIL = "erentasdemircs@gmail.com";
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/etasdemircs/";
 
 export const GITHUB_URL = "https://github.com/etasdemir";
+
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
+}
+
+export const device = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`,
+  laptop: `(min-width: ${size.laptop})`,
+  laptopL: `(min-width: ${size.laptopL})`,
+  desktop: `(min-width: ${size.desktop})`,
+  desktopL: `(min-width: ${size.desktop})`
+};
 
 export const ABOUT: AboutElement[] = [
   {
