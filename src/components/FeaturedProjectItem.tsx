@@ -95,7 +95,7 @@ const ProjectInfoContainer = styled.div<FlexProps>`
 
   @media ${device.tablet} {
     width: 70%;
-    margin-top: 0rem;
+    margin-top: 0;
     
     position: absolute;
     left: ${({ flexAlign }) => flexAlign?.pos === 'right' ? 0 : 'initial'};

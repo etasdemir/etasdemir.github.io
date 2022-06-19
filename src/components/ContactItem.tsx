@@ -47,7 +47,7 @@ const Container = styled.div<ContainerProps>`
   padding-left: ${({paddingStart}) => paddingStart}vw;
   display: flex;
   flex-direction: column;
-  margin: 1em 0;
+  margin: 1rem 0;
 `;
 
 const CopiedText = styled.span<CopiedTextProps>`

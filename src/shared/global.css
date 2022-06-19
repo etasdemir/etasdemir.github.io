@@ -17,6 +17,7 @@ body {
     user-select: none;
 
     transition: all 500ms;
+    --side-menu-width: 0;
 }
 
 @media (min-width: 1024px) {

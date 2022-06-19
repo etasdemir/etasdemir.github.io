@@ -50,13 +50,11 @@ const Container = styled.div`
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  
+  width: 100%;
 `;
 
 const EndGreeting = styled.span`
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 5rem;
   font-weight: 400;
 `;
@@ -66,6 +64,10 @@ const ContactContainer = styled.div`
   flex-direction: column;
   margin-top: 6rem;
   width: 100%;
+
+  @media ${device.laptop} {
+    align-items: initial;
+  }
 `;
 
 const ScrollButton = styled.div`
