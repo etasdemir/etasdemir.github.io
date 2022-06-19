@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { device } from '../shared/Constants';
+import MobileMenu from './MobileMenu';
 
 function MobileMenuButton() {
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
   const onMenuClicked = () => {
-    console.log('clicked');
+    setIsMenuVisible((prev) => !prev);
   };
 
   return (
-    <Button onClick={onMenuClicked}>
-      TEST
-    </Button>
+    <>
+      <Button onClick={onMenuClicked}>
+        TEST
+      </Button>
+      {isMenuVisible ? <MobileMenu /> : null}
+    </>
   );
 }
 
