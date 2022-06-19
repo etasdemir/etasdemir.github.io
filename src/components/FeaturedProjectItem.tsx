@@ -62,28 +62,46 @@ interface FlexProps {
 const ItemContainer = styled.div<FlexProps>`
   position: relative;
   display: flex;
-  flex-direction: ${({ flexAlign }) => flexAlign?.flex};
+  flex-direction: column;
   align-items: center;
   margin: 4em 0;
+  
+  @media ${device.tablet} {
+    flex-direction: ${({ flexAlign }) => flexAlign?.flex};
+  }
 `;
 
 const ProjectImage = styled.img`
-  width: 60vw;
-  height: 60vw;
+  margin-top: 7rem;
   border-radius: 5%;
+  width: 100vw;
+  height: auto;
+
+  @media ${device.laptop} {
+    width: 40vw;
+    height: auto;
+  }
 `;
 
 const ProjectInfoContainer = styled.div<FlexProps>`
-  position: absolute;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
   align-items: ${({ flexAlign }) => flexAlign?.align};
-  left: ${({ flexAlign }) => flexAlign?.pos === 'right' ? 0 : 'initial'};
-  right: ${({ flexAlign }) => flexAlign?.pos === 'left' ? 0 : 'initial'};
-  z-index: 2;
   background-color: var(--page-background);
   border-radius: 3rem;
-  padding: 1.5em 2.5em;
+  padding: 2.5rem;
+
+  margin-top: 5rem;
+
+  @media ${device.tablet} {
+    width: 70%;
+    margin-top: 0rem;
+    
+    position: absolute;
+    left: ${({ flexAlign }) => flexAlign?.pos === 'right' ? 0 : 'initial'};
+    right: ${({ flexAlign }) => flexAlign?.pos === 'left' ? 0 : 'initial'};
+    z-index: 2;
+  }
 
   @media ${device.laptop} {
     width: 62%;
@@ -117,7 +135,7 @@ const ProjectTitle = styled.span`
 const ProjectDescription = styled.span`
   text-align: left;
   margin: 1em 0;
-  font-size: 1.6rem;
+  font-size: calc(0.8rem + 7px);
   color: black;
 `;
 
@@ -135,7 +153,7 @@ const TechStackName = styled.span`
   color: var(--primary-dark);
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  font-size: 1.8rem;
+  font-size: calc(0.8rem + 7px);
 `;
 
 export default withObservable(FeaturedProjectItem);

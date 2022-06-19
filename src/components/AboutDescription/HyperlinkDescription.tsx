@@ -40,7 +40,7 @@ const NewsletterLink = styled.a`
   color: black;
   
   &:hover {
-    transform: translate(3vw, 0);
+    transform: translate(5rem, 0);
   }
 
   &::before {

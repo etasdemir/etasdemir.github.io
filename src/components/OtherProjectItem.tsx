@@ -50,7 +50,7 @@ const ProjectDescripton = styled.span`
   display: block;
   text-align: center;
   color: black;
-  font-size: 1.6rem;
+  font-size: calc(0.8rem + 7px);
   margin: 1em 0;
 `;
 
@@ -68,7 +68,7 @@ const TechStackName = styled.span`
   color: var(--primary-dark);
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  font-size: 1.6rem;
+  font-size: calc(0.8rem + 7px);
 `;
 
 export default withObservable(OtherProjectItem);

@@ -59,7 +59,7 @@ const Title = styled.span`
 `;
 
 const Description = styled.span`
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: inline-block;
 
   @media ${device.laptop} {
