@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-import { GITHUB_URL, PROJECTS } from '../../shared/Constants';
+import { device, GITHUB_URL, PROJECTS } from '../../shared/Constants';
 import Hyperlink from '../../components/Hyperlink';
 import Navigation from '../../nav/Navigation';
 import { ProjectInfo, WithObservableRef } from '../../shared/Types';
@@ -60,8 +60,11 @@ const Title = styled.span`
 
 const Description = styled.span`
   font-size: 3rem;
-  width: 50%;
   display: inline-block;
+
+  @media ${device.laptop} {
+    width: 50%; 
+  }
 `;
 
 export default withObservable(Work);

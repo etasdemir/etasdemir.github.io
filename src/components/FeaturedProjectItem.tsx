@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useCombinedRefs } from '../libs/CombineRefs';
 import { withObservable } from '../libs/ViewPortObserver';
+import { device } from '../shared/Constants';
 
 import { ProjectInfo, WithObservableRef } from '../shared/Types';
 import AppStoreBadge from './AppStoreBadge';
@@ -67,8 +68,8 @@ const ItemContainer = styled.div<FlexProps>`
 `;
 
 const ProjectImage = styled.img`
-  width: 80rem;
-  height: 80rem;
+  width: 60vw;
+  height: 60vw;
   border-radius: 5%;
 `;
 
@@ -77,13 +78,16 @@ const ProjectInfoContainer = styled.div<FlexProps>`
   display: flex;
   flex-direction: column;
   align-items: ${({ flexAlign }) => flexAlign?.align};
-  width: 62%;
   left: ${({ flexAlign }) => flexAlign?.pos === 'right' ? 0 : 'initial'};
   right: ${({ flexAlign }) => flexAlign?.pos === 'left' ? 0 : 'initial'};
   z-index: 2;
   background-color: var(--page-background);
   border-radius: 3rem;
   padding: 1.5em 2.5em;
+
+  @media ${device.laptop} {
+    width: 62%;
+  }
 `;
 
 const ProjectLink = styled.a<FlexProps>`
@@ -113,7 +117,7 @@ const ProjectTitle = styled.span`
 const ProjectDescription = styled.span`
   text-align: left;
   margin: 1em 0;
-  font-size: 2.1rem;
+  font-size: 1.6rem;
   color: black;
 `;
 
@@ -129,9 +133,9 @@ const TechStackName = styled.span`
   margin: 0.4rem 0.8rem;
   border: 1px solid var(--primary-dark);
   color: var(--primary-dark);
-  padding: 0.5% 1%;
+  padding: 0.5rem 1rem;
   border-radius: 15px;
-  font-size: 2rem;
+  font-size: 1.8rem;
 `;
 
 export default withObservable(FeaturedProjectItem);

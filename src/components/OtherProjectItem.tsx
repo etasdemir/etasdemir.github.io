@@ -25,7 +25,7 @@ function OtherProjectItem(props: Props) {
 
 const ProjectContainer = styled.a`
   background-color: var(--primary-light);
-  margin: 1em;
+  margin: 5em 1em;
   border-radius: 5%;
   padding: 1em;
   justify-content: center;
@@ -50,7 +50,7 @@ const ProjectDescripton = styled.span`
   display: block;
   text-align: center;
   color: black;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 1em 0;
 `;
 
@@ -66,9 +66,9 @@ const TechStackName = styled.span`
   margin: 0.4rem;
   border: 1px solid var(--primary-dark);
   color: var(--primary-dark);
-  padding: 1% 2%;
+  padding: 0.5rem 1rem;
   border-radius: 15px;
-  font-size: 2rem;
+  font-size: 1.6rem;
 `;
 
 export default withObservable(OtherProjectItem);

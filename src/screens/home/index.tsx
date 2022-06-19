@@ -28,26 +28,34 @@ const HomeContainer = styled.div`
 `;
 
 const GreetingText = styled.span`
+  margin-top: 3rem;
   font-size: 3.5rem;
 `;
 
 const Title = styled.span`
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: bold;
-  margin-top: 0.6em;
+  margin-top: 4rem;
+
+  @media ${device.laptop} {
+    font-size: 6rem;
+  }
 `;
 
 const Description = styled.span`
   font-size: 3rem;
-  width: 70%;
-  margin-top: 1.2em
+  margin-top: 3rem;
+
+  @media ${device.laptop} {
+    width: 70%; 
+  }
 `;
 
 const ProfilePicture = styled.img`
-  margin-top: 5em;
+  margin-top: 8rem;
   margin-left: auto;
-  height: 40em;
-  width: 40em;
+  height: calc(18vw + 10rem);
+  width: calc(18vw + 10rem);
   border-radius: 50%;
 
   @media ${device.laptop} { 

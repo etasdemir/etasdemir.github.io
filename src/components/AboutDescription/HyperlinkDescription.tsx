@@ -25,11 +25,12 @@ function HyperlinkDescription(props: Props) {
 }
 
 const LinkContainer = styled.div`
-  margin-top: 2em;
+  margin: 2.5rem 0;
   display: inline-block;
 `;
 
 const NewsletterLink = styled.a`
+  margin: 4px 0;
   font-size: 2.1rem;
   font-weight: 300;
   display: block;

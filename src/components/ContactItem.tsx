@@ -67,12 +67,12 @@ const Name = styled.span`
   -ms-user-select: text;
   user-select: text;
 
-  font-size: 2.4rem;
+  font-size: 2.7rem;
   display: inline-block;
 `;
 
 const Button = styled.div`
-  font-size: 2.2em;
+  font-size: 2.5rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 500ms;
