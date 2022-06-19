@@ -9,6 +9,7 @@ import Home from './screens/home';
 import Work from './screens/work';
 import SideMenu from './nav/SideMenu';
 import './shared/global.css';
+import MobileMenuButton from './nav/MobileMenuButton';
 
 const SectionContainer = styled.div`
   display: block;
@@ -28,5 +29,6 @@ root.render(
       <Contact />
     </SectionContainer>
     <SideMenu />
+    <MobileMenuButton />
   </React.StrictMode>
 );

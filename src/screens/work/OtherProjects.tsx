@@ -37,7 +37,7 @@ const OtherProjectTitle = styled.span`
 const OtherProjectGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  padding: 10px;
+  padding: 10px 0;
   margin: 2em 0;
   
   @media ${device.tablet} {

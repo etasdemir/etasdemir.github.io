@@ -29,7 +29,7 @@ function Contact(props: Props) {
         <GreetingText />
         <ContactContainer ref={useCombinedRefs(observableRef)}>
           {CONTACT.map((item, index) => (
-            <ContactItem key={item.url + index} paddingStart={index * 15} contact={item} />
+            <ContactItem key={item.url + index} paddingStart={index * 23} contact={item} />
           ))}
         </ContactContainer>
       </InfoContainer>
@@ -44,13 +44,20 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
-  margin: 25vh 0;
+  margin-top: 10rem;
+  margin-bottom: 20rem;
 `;
 
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  align-items: center;
+
+  @media ${device.laptop} {
+    align-items: initial;
+  }
 `;
 
 const EndGreeting = styled.span`

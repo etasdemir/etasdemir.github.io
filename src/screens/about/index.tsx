@@ -46,13 +46,11 @@ function About(props: Props) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 `;
 
 const Title = styled.h1`
   font-size: 7rem;
   font-weight: bold;
-  margin-bottom: 0.5em;
   text-align: end;
 `;
 

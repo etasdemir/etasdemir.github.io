@@ -37,7 +37,7 @@ const Container = styled.div<Align>`
   display: flex;
   flex-direction: column;
   align-items: ${({ align }) => align};
-  margin: 4em 6em;
+  margin-bottom: 12rem;
 `;
 
 const Title = styled.span`

@@ -25,12 +25,12 @@ const ElementContainer = styled.div`
 
 const Description = styled.span`
   font-size: 2.1rem;
-  margin-top: 0.5em;
+  margin-top: 1rem;
   font-weight: 300;
   &::before {
     content: "▸";
     color: var(--primary-dark);
-    font-size: 1.4rem;
+    font-size: 2.5rem;
   }
 `;
 
