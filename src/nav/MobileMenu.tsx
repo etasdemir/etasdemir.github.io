@@ -1,22 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { useAppContext } from '../shared/AppContext';
+import Navigation from './Navigation';
+
 function shouldScrollEnabled(isEnabled: boolean) {
   const body = document.body;
   if (!body) {
     return;
   }
-  body.style.overflowY = !isEnabled ? 'hidden' : 'scroll'
+  body.style.overflowY = !isEnabled ? 'hidden' : 'scroll';
 }
 
 function MobileMenu() {
+  const { isMenuVisible, setIsMenuVisible } = useAppContext();
   const onMenuClick = (screenName: string) => {
-    console.log('screen:', screenName);
+    setIsMenuVisible(false);
+    shouldScrollEnabled(!isMenuVisible);
+    Navigation.scrollToScreen(screenName);
   };
-  shouldScrollEnabled(false);
+  shouldScrollEnabled(!isMenuVisible);
+  if (!isMenuVisible) {
+    return null;
+  }
 
   return (
-    <MenuContainer>
+    <MenuContainer isVisible={isMenuVisible}>
       <span>navigate to:</span>
       <MenuButton onClick={() => onMenuClick('home')}>
         <span>Home</span>
@@ -34,12 +43,18 @@ function MobileMenu() {
   );
 }
 
-const MenuContainer = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+interface MenuProps {
+  isVisible: boolean
+}
+
+const MenuContainer = styled.div<MenuProps>`
+  position: fixed;
+  z-index: 9;
   left: 0;
+  right: 0;
+  top: 0;
+  
+  height: 100%;
 
   background-color: #FFFFFFEF;
 
@@ -49,15 +64,16 @@ const MenuContainer = styled.div`
   justify-content: center;
 
   span {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
   }
 `;
 
 const MenuButton = styled.button`
-  width: 40rem;
+  width: 45rem;
+  padding: 1rem 0;
   margin: 2.5rem 0;
-  border: 1px solid var(--grey);
+  border: 1.5px solid var(--grey);
   border-radius: 4vw;
   background-color: transparent;
   transition: opacity 50ms;

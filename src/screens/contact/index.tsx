@@ -45,7 +45,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 10rem;
-  margin-bottom: 20rem;
+  margin-bottom: 45rem;
+
+  @media ${device.laptop} {
+    margin-bottom: 20rem;
+  }
 `;
 
 const InfoContainer = styled.div`

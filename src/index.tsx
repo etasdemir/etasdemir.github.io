@@ -10,6 +10,8 @@ import Work from './screens/work';
 import SideMenu from './nav/SideMenu';
 import './shared/global.css';
 import MobileMenuButton from './nav/MobileMenuButton';
+import { AppContextProvider } from './shared/AppContext';
+import MobileMenu from './nav/MobileMenu';
 
 const SectionContainer = styled.div`
   display: block;
@@ -22,13 +24,16 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <SectionContainer>
-      <Home />
-      <Work />
-      <About />
-      <Contact />
-    </SectionContainer>
-    <SideMenu />
-    <MobileMenuButton />
+    <AppContextProvider>
+      <SectionContainer>
+        <Home />
+        <Work />
+        <About />
+        <Contact />
+      </SectionContainer>
+      <SideMenu />
+      <MobileMenu />
+      <MobileMenuButton />
+    </AppContextProvider>
   </React.StrictMode>
 );
