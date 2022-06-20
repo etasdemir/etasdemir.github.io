@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d2173560.css",
+    "main.js": "/static/js/main.deba665a.js",
+    "static/media/albedo-collage.webp": "/static/media/albedo-collage.4097fd03c864a1b8f325.webp",
+    "static/media/optic-map-collage.webp": "/static/media/optic-map-collage.93d693050ec8124b4362.webp",
+    "static/media/gpacademic-collage.webp": "/static/media/gpacademic-collage.18be943e53e81972edc9.webp",
+    "static/media/profile.jpg": "/static/media/profile.83d1f58439954c368654.jpg",
+    "static/media/app_store_ic.jpg": "/static/media/app_store_ic.269f238dc1969cdf8a56.jpg",
+    "static/media/play_store_ic.jpg": "/static/media/play_store_ic.59ec24ab42e494f47e88.jpg",
+    "index.html": "/index.html",
+    "main.d2173560.css.map": "/static/css/main.d2173560.css.map",
+    "main.deba665a.js.map": "/static/js/main.deba665a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2173560.css",
+    "static/js/main.deba665a.js"
+  ]
+}
