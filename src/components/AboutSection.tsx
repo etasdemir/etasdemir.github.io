@@ -41,7 +41,7 @@ const Container = styled.div<Align>`
 `;
 
 const Title = styled.span`
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: 4rem;
   font-weight: bold;
 `;
