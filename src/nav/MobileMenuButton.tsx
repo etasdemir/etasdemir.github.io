@@ -28,6 +28,7 @@ const Button = styled.button`
   border-radius: 50%;
   transition: all 150ms;
   z-index: 10;
+  cursor: pointer;
 
   &:active {
     opacity: 0.3;
