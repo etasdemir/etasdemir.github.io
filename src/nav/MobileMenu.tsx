@@ -75,7 +75,7 @@ const MenuContainer = styled.div<MenuProps>`
 `;
 
 const MenuButton = styled.button<IsMenuVisible>`
-  width: 45rem;
+  width: 40rem;
   padding: 1rem 0;
   margin: 2.5rem 0;
   border: 1.5px solid var(--grey);

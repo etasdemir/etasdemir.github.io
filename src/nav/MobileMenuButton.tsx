@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 import { useAppContext } from '../shared/AppContext';
 import { device } from '../shared/Constants';
@@ -13,22 +14,27 @@ function MobileMenuButton() {
 
   return (
     <Button onClick={onMenuClicked}>
-      TEST
+      <MenuRoundedIcon sx={{ width: 30, height: 30 }} />
     </Button>
   );
 }
 
 const Button = styled.button`
-  width: 50px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+
   position: fixed;
-  bottom: 5rem;
-  right: 5rem;
+  bottom: 4rem;
+  right: 4rem;
   border: 1px solid black;
   border-radius: 50%;
   transition: all 150ms;
   z-index: 10;
   cursor: pointer;
+
+  background-color: var(--primary);
 
   &:active {
     opacity: 0.3;
