@@ -52,7 +52,8 @@ const Description = styled.span`
 `;
 
 const ProfilePicture = styled.img`
-  margin-top: 8rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
   margin-left: auto;
   height: calc(18vw + 10rem);
   width: calc(18vw + 10rem);
