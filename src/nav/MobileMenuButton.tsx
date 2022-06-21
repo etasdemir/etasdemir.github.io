@@ -27,13 +27,13 @@ const Button = styled.button`
   position: fixed;
   bottom: 4rem;
   right: 4rem;
-  border: 1px solid black;
+  border: 1.25px solid black;
   border-radius: 50%;
   transition: all 150ms;
   z-index: 10;
   cursor: pointer;
 
-  background-color: var(--primary);
+  background-color: var(--primary-light);
 
   &:active {
     opacity: 0.3;
