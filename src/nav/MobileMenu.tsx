@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { useAppContext } from '../shared/AppContext';
+import { RESUME_URL } from '../shared/Constants';
 import Navigation from './Navigation';
 
 function shouldScrollEnabled(isEnabled: boolean) {
@@ -36,6 +37,9 @@ function MobileMenu() {
       <MenuButton onClick={() => onMenuClick('contact')} isVisible={isMenuVisible}>
         <span>Contact</span>
       </MenuButton>
+      <ResumeButton href={RESUME_URL} isVisible={isMenuVisible}>
+        <span>see my CV</span>
+      </ResumeButton>
     </MenuContainer>
   );
 }
@@ -76,7 +80,7 @@ const MenuContainer = styled.div<MenuProps>`
 
 const MenuButton = styled.button<IsMenuVisible>`
   width: 40rem;
-  padding: 1rem 0;
+  padding: 0.25rem 0;
   margin: 2.5rem 0;
   border: 1.5px solid var(--grey);
   border-radius: 4vw;
@@ -96,6 +100,38 @@ const MenuButton = styled.button<IsMenuVisible>`
 
   &:active {
     opacity: 0.25;
+  }
+`;
+
+const ResumeButton = styled.a<IsMenuVisible>`
+  margin-top: 4rem;
+  
+  transition: opacity 50ms;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+
+  visibility: ${({ isVisible }) => isVisible ? 'visible' : 'hidden'};
+  transition: visibility 150ms;
+
+  border-bottom: 1rem solid rgba(190, 190, 190, 0.4);
+
+  span {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 400;
+    visibility: ${({ isVisible }) => isVisible ? 'visible' : 'hidden'};
+    transition: visibility 150ms;
+    display: block;
+    text-align: center;
+  }
+
+  &:active {
+    opacity: 0.25;
+  }
+
+  span:before {
+    content: '> '
   }
 `;
 

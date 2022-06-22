@@ -6,6 +6,8 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/etasdemircs/";
 
 export const GITHUB_URL = "https://github.com/etasdemir";
 
+export const RESUME_URL = "https://etasdemir.github.io/";
+
 const size = {
   mobileS: '320px',
   mobileM: '375px',
