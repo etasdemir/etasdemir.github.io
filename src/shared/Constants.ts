@@ -6,7 +6,7 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/etasdemircs/";
 
 export const GITHUB_URL = "https://github.com/etasdemir";
 
-export const RESUME_URL = "https://etasdemir.github.io/";
+export const RESUME_URL = "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/etasdemir/etasdemir.github.io/main/src/assets/cv.pdf";
 
 const size = {
   mobileS: '320px',
