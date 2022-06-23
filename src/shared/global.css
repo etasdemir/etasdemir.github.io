@@ -60,6 +60,8 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    scrollbar-color: var(--primary-dark) var(--page-background);
 }
 
 ::-webkit-scrollbar {
