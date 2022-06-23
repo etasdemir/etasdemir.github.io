@@ -12,7 +12,6 @@ import './shared/global.css';
 import MobileMenuButton from './nav/MobileMenuButton';
 import { AppContextProvider } from './shared/AppContext';
 import MobileMenu from './nav/MobileMenu';
-import ResumeFixedButton from './components/ResumeFixedButton';
 
 const SectionContainer = styled.div`
   display: block;
@@ -35,7 +34,6 @@ root.render(
       <SideMenu />
       <MobileMenu />
       <MobileMenuButton />
-      <ResumeFixedButton />
     </AppContextProvider>
   </React.StrictMode>
 );

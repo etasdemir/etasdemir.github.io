@@ -22,7 +22,7 @@ function ContactItem(props: Props) {
 
   const copyToClipboard = (e: React.MouseEvent<HTMLSpanElement>) => {
     const text = e.currentTarget.textContent;
-    if (!text) {
+    if (!text || !text.includes('.com')) {
       return;
     }
     navigator.clipboard.writeText(text);

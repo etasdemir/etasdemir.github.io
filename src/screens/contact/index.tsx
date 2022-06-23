@@ -29,7 +29,7 @@ function Contact(props: Props) {
         <GreetingText />
         <ContactContainer ref={useCombinedRefs(observableRef)}>
           {CONTACT.map((item, index) => (
-            <ContactItem key={item.url + index} paddingStart={index * 23} contact={item} />
+            <ContactItem key={item.url + index} paddingStart={index * 15} contact={item} />
           ))}
         </ContactContainer>
       </InfoContainer>

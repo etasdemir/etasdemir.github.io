@@ -24,7 +24,7 @@ function OtherProjectItem(props: Props) {
 }
 
 const ProjectContainer = styled.a`
-  background-color: var(--primary-light);
+  background-color: var(--primary-light-opacity);
   margin: 5em 1em;
   border-radius: 5%;
   padding: 1em;

@@ -97,7 +97,12 @@ export const CONTACT: Array<ContactInfo> = [
     urlName: 'Eren Tasdemir',
     url: LINKEDIN_URL,
     buttonText: 'visit linkedin',
-  }
+  },
+  {
+    urlName: 'Resume',
+    url: RESUME_URL,
+    buttonText: 'see my cv',
+  },
 ];
 
 

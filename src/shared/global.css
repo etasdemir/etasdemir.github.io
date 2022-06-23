@@ -52,11 +52,6 @@ body {
     }
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-}
-
 * {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -85,5 +80,5 @@ code {
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: var(--primary-light);
+    background: var(--primary-light-opacity);
 }
