@@ -151,7 +151,7 @@ export const PROJECTS: Array<ProjectInfo> = [
   },
   {
     title: "Leasify",
-    description: "Leasify is a trustless asset leasing smart contract deployed on NEAR testnet. It is written in AssemblyScript. With Leasify, you can buy asset and lease them. With that, you can get periodic income from your asset. Alternatively, you might want to lease an asset instead of buying. You only need to pay lease price periodically.",
+    description: "Leasify is a trustless asset leasing smart contract deployed on NEAR testnet. It is written in AssemblyScript. With Leasify, you can buy asset and lease them. With that, you can get periodic income from your asset. Alternatively, you might want to lease an asset instead of buying. You only need to pay lease price periodically. With this project, I became a NEAR Certified Developer given by NEAR Foundation.",
     url: "https://github.com/etasdemir/leasify",
     techStack: [
       "AssemblyScript",
