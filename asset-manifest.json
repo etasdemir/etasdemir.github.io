@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.f1593631.css",
-    "main.js": "/static/js/main.665888dc.js",
+    "main.css": "/static/css/main.655b1b47.css",
+    "main.js": "/static/js/main.d57becda.js",
+    "static/media/trackie-collage.webp": "/static/media/trackie-collage.418aa3d878f2a27edf1f.webp",
     "static/media/albedo-collage.webp": "/static/media/albedo-collage.4097fd03c864a1b8f325.webp",
     "static/media/optic-map-collage.webp": "/static/media/optic-map-collage.93d693050ec8124b4362.webp",
     "static/media/gpacademic-collage.webp": "/static/media/gpacademic-collage.18be943e53e81972edc9.webp",
@@ -10,11 +11,11 @@
     "static/media/app_store_ic.jpg": "/static/media/app_store_ic.269f238dc1969cdf8a56.jpg",
     "static/media/play_store_ic.jpg": "/static/media/play_store_ic.59ec24ab42e494f47e88.jpg",
     "index.html": "/index.html",
-    "main.f1593631.css.map": "/static/css/main.f1593631.css.map",
-    "main.665888dc.js.map": "/static/js/main.665888dc.js.map"
+    "main.655b1b47.css.map": "/static/css/main.655b1b47.css.map",
+    "main.d57becda.js.map": "/static/js/main.d57becda.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1593631.css",
-    "static/js/main.665888dc.js"
+    "static/css/main.655b1b47.css",
+    "static/js/main.d57becda.js"
   ]
 }
