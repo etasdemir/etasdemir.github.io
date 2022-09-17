@@ -121,6 +121,7 @@ export const PROJECTS: Array<ProjectInfo> = [
       "Redux Logger"
     ],
     image: "trackie-collage.webp",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.trackie",
   },
   {
     title: "OpticMap",
