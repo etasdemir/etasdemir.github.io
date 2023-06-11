@@ -6,7 +6,7 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/etasdemircs/";
 
 export const GITHUB_URL = "https://github.com/etasdemir";
 
-export const RESUME_URL = "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/etasdemir/etasdemir.github.io/main/src/assets/cv.pdf";
+export const RESUME_URL = "https://drive.google.com/file/d/1utnhE44UJ9fFdNJE5G7rxd1PnFjHo6WL/view?usp=sharing";
 
 const size = {
   mobileS: '320px',
@@ -42,9 +42,9 @@ export const ABOUT: AboutElement[] = [
     subtitle: "Here are a few technologies I’ve experience in:",
     type: "element",
     descriptions: [
-      "Android, Kotlin, Java, C++",
-      "React Native, React",
-      "JavaScript, HTML/CSS"
+      "Android SDK/NDK/JNI, Kotlin, Java, C++",
+      "React Native, React, JavaScript, TypeScript",
+      "Git, REST, HTTP, Jira, Docker, Linux, Shell, Gitlab CI"
     ],
   },
   {
@@ -147,6 +147,7 @@ export const PROJECTS: Array<ProjectInfo> = [
       "Dagger2",
       "Architecture Components",
       "Retrofit2",
+      "Gson",
       "Coroutine"
     ],
     image: "albedo-collage.webp"
@@ -166,12 +167,36 @@ export const PROJECTS: Array<ProjectInfo> = [
     playStoreLink: "https://play.google.com/store/apps/details?id=com.elacqua.gpacademic",
   },
   {
+    title: "etasdemir.github.io",
+    description: "The page you are currently viewing. Personal website for showcasing skills, projects, and achievements. Centralized location for interested parties to learn more about my work and professional identity.",
+    url: "https://github.com/etasdemir/etasdemir.github.io",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Styled Components",
+      "Github Pages"
+    ],
+  },
+  {
     title: "Leasify",
     description: "Leasify is a trustless asset leasing smart contract deployed on NEAR testnet. It is written in AssemblyScript. With Leasify, you can buy asset and lease them. With that, you can get periodic income from your asset. Alternatively, you might want to lease an asset instead of buying. You only need to pay lease price periodically. With this project, I became a NEAR Certified Developer given by NEAR Foundation.",
     url: "https://github.com/etasdemir/leasify",
     techStack: [
       "AssemblyScript",
       "NEAR SDK"
+    ],
+  },
+  {
+    title: "OSX Container",
+    description: "Run MacOS in a docker container using QEMU. Read/Write on a shared volume, adjustable resolution to match the QEMU window (scales up to 4096x2160), mount usb, build & install apps to iphone from XCode.",
+    url: "https://github.com/etasdemir/osx-container",
+    techStack: [
+      "Docker",
+      "Ubuntu",
+      "MacOS",
+      "QEMU",
+      "usbredir",
+      "usbmuxd"
     ],
   },
   {
