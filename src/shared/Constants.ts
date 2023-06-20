@@ -108,6 +108,25 @@ export const CONTACT: Array<ContactInfo> = [
 
 export const PROJECTS: Array<ProjectInfo> = [
   {
+    title: "EthInspector",
+    description: "EthInspector offers a powerful Ethereum Block Explorer for easy navigation of addresses, contracts, transactions, and blocks. Stay informed, organized, and in control of your Ethereum assets and interactions. Effortlessly search, save favorites, and gain insights into Ethereum blocks, transactions, addresses, and contracts. Access comprehensive transaction details and monitor the activity of specific addresses for a complete overview of your Ethereum holdings. Analyze the transactional history of smart contracts to understand their impact on the Ethereum ecosystem. Multi language and multi theme supported.",
+    url: "https://github.com/etasdemir/eth-inspector",
+    techStack: [
+      "Kotlin",
+      "MVVM",
+      "Jetpack Compose",
+      "Compose Navigation",
+      "Room",
+      "Retrofit",
+      "Moshi",
+      "Hilt",
+      "Architecture Components",
+      "Coroutine",
+      "Timber"
+    ],
+    image: "eth_inspector_collage.jpg",
+  },
+  {
     title: "Trackie",
     description: "With Trackie you can explore the most popular genres, manga, authors, and characters. Track down your manga reading status. Follow your favorite author, character, and mangas. Offline first, multi-language, dark theme supported multi-platform mobile application. Easily update your chapter progress so your list is never out of date. Search your favorite manga, character, and author. Bookmark your current readings, recently reads, and favorite mangas, characters, and authors.",
     url: "https://github.com/etasdemir/Trackie",
