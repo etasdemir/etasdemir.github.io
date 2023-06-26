@@ -42,7 +42,7 @@ export const ABOUT: AboutElement[] = [
     subtitle: "Here are a few technologies I’ve experience in:",
     type: "element",
     descriptions: [
-      "Android SDK/NDK/JNI, Kotlin, Java, C++",
+      "Android SDK/NDK/JNI, Jetpack Compose, Kotlin, Java, C++",
       "React Native, React, JavaScript, TypeScript",
       "Git, REST, HTTP, Jira, Docker, Linux, Shell, Gitlab CI"
     ],
@@ -125,6 +125,7 @@ export const PROJECTS: Array<ProjectInfo> = [
       "Timber"
     ],
     image: "eth_inspector_collage.jpg",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.etasdemir.ethinspector",
   },
   {
     title: "Trackie",
